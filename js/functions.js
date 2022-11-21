@@ -98,10 +98,9 @@ console.log(calculateTip(0.25, 25.50));
 
 let billTotal = prompt('What is the total of your bill?');
 let billPercent = prompt('What would you like to tip?')
+let percentDecimal = billPercent/100;
 
-let percentDec = billPercent/100;
-
-let billTip = calculateTip(percentDec, billTotal);
+let billTip = calculateTip(percentDecimal, billTotal);
 
 alert('You will be tipping: $' + billTip);
 
