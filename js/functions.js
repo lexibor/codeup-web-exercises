@@ -9,11 +9,12 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-
+console.log(sayHello("Bob"));
 
 function sayHello(name)
 {
-   return 'Hello, ' + name + '!';
+   //return 'Hello, ' + name + '!';
+   return `Hello, ${name}!`;
 }
 
 /**
@@ -94,13 +95,13 @@ console.log(calculateTip(25, 25.50));
  * then display the dollar amount they should tip
  */
 
-let billTotal = prompt('What is the total of your bill?');
-let billPercent = prompt('What would you like to tip?')
-
-
-let billTip = calculateTip(billPercent, billTotal);
-
-alert('You will be tipping: $' + billTip.toFixed(2));
+// let billTotal = prompt('What is the total of your bill?');
+// let billPercent = prompt('What would you like to tip?')
+//
+//
+// let billTip = calculateTip(billPercent, billTotal);
+//
+// alert('You will be tipping: $' + billTip.toFixed(2));
 
 /**
  * TODO:
