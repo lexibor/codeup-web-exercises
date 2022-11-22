@@ -79,12 +79,10 @@ console.log(isTwo(random));
 
 function calculateTip(percent, total)
 {
-   let tipPercent = percent/100;
+   let tipPercent = (percent/100);
    //console.log(tipPercent);
-   let tipTotal = (total * tipPercent);
-
+   let tipTotal = (total * tipPercent).toFixed(2);
    return tipTotal;
-
 }
 console.log(calculateTip(20, 20));
 console.log(calculateTip(25, 25.50));
