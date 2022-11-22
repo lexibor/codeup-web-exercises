@@ -119,9 +119,9 @@ alert('You will be tipping: $' + billTip.toFixed(2));
 
 function applyDiscount(price, percent)
 {
-   let discountCalc = price - (price * percent)
+   let discountCalc = price - (price * (percent/100));
    return discountCalc;
 }
 
-console.log(applyDiscount(100, .2));
-console.log(applyDiscount(45.99, .12));
+console.log(applyDiscount(100, 20));
+console.log(applyDiscount(45.99, 12));
