@@ -9,8 +9,7 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-let myName = 'Alexia';
-console.log(sayHello(myName));
+
 
 function sayHello(name)
 {
@@ -34,7 +33,8 @@ console.log(helloMessage);
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-
+let myName = 'Alexia';
+console.log(sayHello(myName));
 
 
 // Don't modify the following line, it generates a random number between 1 and 3
