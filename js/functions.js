@@ -81,7 +81,7 @@ function calculateTip(percent, total)
 {
    let tipPercent = (percent/100);
    //console.log(tipPercent);
-   let tipTotal = (total * tipPercent).toFixed(2);
+   let tipTotal = parseFloat((total * tipPercent).toFixed(2));
    return tipTotal;
 }
 console.log(calculateTip(20, 20));
