@@ -79,15 +79,15 @@ console.log(isTwo(random));
 
 function calculateTip(percent, total)
 {
-   let tipPercent = percent;
+   let tipPercent = percent/100;
    //console.log(tipPercent);
    let tipTotal = (total * tipPercent);
 
    return tipTotal;
 
 }
-console.log(calculateTip(0.20, 20));
-console.log(calculateTip(0.25, 25.50));
+console.log(calculateTip(20, 20));
+console.log(calculateTip(25, 25.50));
 
 /**
  * TODO:
@@ -98,7 +98,7 @@ console.log(calculateTip(0.25, 25.50));
 
 let billTotal = prompt('What is the total of your bill?');
 let billPercent = prompt('What would you like to tip?')
-let percentDecimal = billPercent/100;
+let percentDecimal = billPercent;
 
 let billTip = calculateTip(percentDecimal, billTotal);
 
