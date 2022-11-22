@@ -120,7 +120,7 @@ alert('You will be tipping: $' + billTip.toFixed(2));
 function applyDiscount(price, percent)
 {
    let discountCalc = price - (price * (percent/100));
-   return discountCalc;
+   return discountCalc.toFixed(2);
 }
 
 console.log(applyDiscount(100, 20));
