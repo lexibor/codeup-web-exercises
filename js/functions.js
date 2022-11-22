@@ -100,7 +100,7 @@ let billPercent = prompt('What would you like to tip?')
 
 let billTip = calculateTip(billPercent, billTotal);
 
-alert('You will be tipping: $' + billTip);
+alert('You will be tipping: $' + billTip.toFixed(2));
 
 /**
  * TODO:
