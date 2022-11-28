@@ -22,6 +22,8 @@
  * console.logging the function's return value
  */
 // let colorChoice = prompt('Type in a color');
+// let colorResult = analyzeColor(randomColor);
+// console.log(colorResult);
 //
 // colorChoice = colorChoice.toLowerCase();
 //
@@ -48,16 +50,16 @@ function analyzeColor(color)
     switch(color)
     {
         case 'red':
-            alert('Strawberries are red');
+            return 'Strawberries are red';
             break;
         case 'green':
-            alert('Grass is green');
+            return 'Grass is green';
             break;
-        case 'red':
-            alert('Strawberries are red');
+        case 'blue':
+            return 'The sky is blue';
             break;
         default:
-            alert('Sorry I can only see RGB');
+            return 'Sorry I can only see RGB';
             break;
     }
 }
@@ -119,7 +121,6 @@ function calculateTotal(num, total)
 {
     //num = random;
     let discount;
-    let percent;
     switch(num)
     {
         case 0:
@@ -190,9 +191,9 @@ function calculateTotal(num, total)
 // Generate a random number between 0 and 6
 var luckyNumber = Math.floor(Math.random() * 6);
 console.log(luckyNumber);
-alert(`Your lucky number is ${luckyNumber}!`);
-alert(`Your bill is $${totalAmount} before adding the discount`);
-alert(`Your bill after the discount is $${calculateTotal(luckyNumber, totalAmount)}`);
+alert(`Your lucky number is ${luckyNumber}!
+Your bill is $${totalAmount} before adding the discount
+With the discount you are paying $${calculateTotal(luckyNumber, totalAmount)}`);
 
 /**
  * TODO:
@@ -222,8 +223,8 @@ function numberEnter(num)
     //console.log(number);
     if(typeof number == 'number' && !isNaN(number))
     {
-        alert(`Your number is ${evenOrOdd(number)}`);
-        alert(`If you were to add 100 to your number it would be ${number + 100}`);
+        alert(`Your number is ${evenOrOdd(number)}
+        If you were to add 100 to your number it would be ${number + 100}`);
         if(number > 0)
         {
             alert(`Your number is positive`);
