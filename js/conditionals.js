@@ -224,19 +224,8 @@ function numberEnter(num)
     if(typeof number == 'number' && !isNaN(number))
     {
         alert(`Your number is ${evenOrOdd(number)}
-        If you were to add 100 to your number it would be ${number + 100}`);
-        if(number > 0)
-        {
-            alert(`Your number is positive`);
-        }
-        else if(number < 0)
-        {
-            alert(`Your number is negative`)
-        }
-        else
-        {
-            alert(`Your number is neither positive nor negative, it is 0`);
-        }
+        If you were to add 100 to your number it would be ${number + 100}
+        Your number is ${negOrPos(num)}`);
     }
     else
     {
@@ -254,6 +243,22 @@ function evenOrOdd(num)
         return `Odd`;
     }
 
+}
+
+function negOrPos(number)
+{
+    if(number > 0)
+    {
+        return 'positive';
+    }
+    else if(number < 0)
+    {
+        return 'negative';
+    }
+    else
+    {
+        return 'neither positive nor negative, it is 0';
+    }
 }
 //////////////////EXTRA//////////////////////////////////////
 function reverse(string)
