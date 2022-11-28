@@ -21,22 +21,45 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-let colorChoice = prompt('Type in a color');
-
-colorChoice = colorChoice.toLowerCase();
-
-analyzeColor(colorChoice);
+// let colorChoice = prompt('Type in a color');
+//
+// colorChoice = colorChoice.toLowerCase();
+//
+// analyzeColor(colorChoice);
 function analyzeColor(color)
 {
-    if(color === "red")
+    // if(color === "red")
+    // {
+    //     console.log('Strawberries are red');
+    // }
+    // else if(color === 'blue')
+    // {
+    //     console.log('The sky is blue');
+    // }
+    // else if(color === 'green')
+    // {
+    //     console.log('The grass is green')
+    // }
+    // else
+    // {
+    //     console.log('Sorry I can only see RGB');
+    // }
+
+    switch(color)
     {
-        console.log('Strawberries are red');
+        case 'red':
+            alert('Strawberries are red');
+            break;
+        case 'green':
+            alert('Grass is green');
+            break;
+        case 'red':
+            alert('Strawberries are red');
+            break;
+        default:
+            alert('Sorry I can only see RGB');
+            break;
     }
-    else if(color === 'blue')
-    {
-        console.log('The sky is blue');
-    }
-    else if(color === '')
 }
 
 // Don't change the next two lines!
@@ -46,11 +69,14 @@ function analyzeColor(color)
 //                  will contain a different color every time the page loads)
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
+
+//analyzeColor(randomColor);
 
 /**
  * TODO:
@@ -85,6 +111,46 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+var random = Math.floor((Math.random() * 6));
+console.log(random);
+let totalAmount = prompt('What is your amount?');
+
+function calculateTotal(num, total)
+{
+    //num = random;
+    let discount;
+    let percent;
+    if(num == 0)
+    {
+        console.log(`No discount, your total is: $${total}`);
+    }
+    else if(num == 1)
+    {
+        discount = total - (total * 0.10);
+        return `You got 1! Your discounted price is: $${discount}`;
+    }
+    else if (num == 2)
+    {
+        discount = total - (total * 0.25);
+        return `You got 2! Your discounted price is: $${discount}`;
+    }
+    else if (num == 3)
+    {
+        discount = total - (total * 0.35);
+        return `You got 3! Your discounted price is: $${discount}`;
+    }
+    else if (num == 4)
+    {
+        discount = total - (total * 0.50);
+        return `You got 4! Your discounted price is: $${discount}`;
+    }
+    else
+    {
+        return `You got 5! Everything is free!`
+    }
+
+}
+console.log(calculateTotal(random, totalAmount));
 
 /**
  * TODO:
