@@ -113,41 +113,69 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 //var random = Math.floor((Math.random() * 6));
 //console.log(random);
-//let totalAmount = prompt('What is your bill?');
+let totalAmount = prompt('What is your bill?');
 
 function calculateTotal(num, total)
 {
     //num = random;
     let discount;
     let percent;
-    if(num == 0)
+    switch(num)
     {
-        return total;
+        case 0:
+            return total;
+            break;
+        case 1:
+            discount = total - (total * 0.10);
+            return discount;
+            break;
+        case 2:
+            discount = total - (total * 0.25);
+            return discount;
+            break;
+        case 3:
+            discount = total - (total * 0.35);
+            return discount;
+            break;
+        case 4:
+            discount = total - (total * 0.50);
+            return discount;
+            break;
+        default:
+            return '0';
+            break;
+
     }
-    else if(num == 1)
-    {
-        discount = total - (total * 0.10);
-        return discount;
-    }
-    else if (num == 2)
-    {
-        discount = total - (total * 0.25);
-        return discount;
-    }
-    else if (num == 3)
-    {
-        discount = total - (total * 0.35);
-        return discount;
-    }
-    else if (num == 4)
-    {
-        discount = total - (total * 0.50);
-        return discount;
-    }
-    else
-    {
-        return `0`;
-    }
+
+    //
+    // if(num == 0)
+    // {
+    //     return total;
+    // }
+    // else if(num == 1)
+    // {
+    //     discount = total - (total * 0.10);
+    //     return discount;
+    // }
+    // else if (num == 2)
+    // {
+    //     discount = total - (total * 0.25);
+    //     return discount;
+    // }
+    // else if (num == 3)
+    // {
+    //     discount = total - (total * 0.35);
+    //     return discount;
+    // }
+    // else if (num == 4)
+    // {
+    //     discount = total - (total * 0.50);
+    //     return discount;
+    // }
+    // else
+    // {
+    //     return `0`;
+    // }
 
 }
 //console.log(calculateTotal(random, totalAmount));
@@ -161,11 +189,11 @@ function calculateTotal(num, total)
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-//  var luckyNumber = Math.floor(Math.random() * 6);
-// console.log(luckyNumber);
-// alert(`Your lucky number is ${luckyNumber}!`);
-// alert(`Your bill is $${totalAmount} before adding the discount`);
-// alert(`Your bill after the discount is $${calculateTotal(luckyNumber, totalAmount)}`);
+var luckyNumber = Math.floor(Math.random() * 6);
+console.log(luckyNumber);
+alert(`Your lucky number is ${luckyNumber}!`);
+alert(`Your bill is $${totalAmount} before adding the discount`);
+alert(`Your bill after the discount is $${calculateTotal(luckyNumber, totalAmount)}`);
 
 /**
  * TODO:
@@ -215,7 +243,6 @@ function numberEnter(num)
         return alert(`You did not input a number.`);
     }
 }
-
 function evenOrOdd(num)
 {
     if(num % 2 === 0)
