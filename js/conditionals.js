@@ -144,7 +144,6 @@ function calculateTotal(num, total)
         default:
             return '0';
             break;
-
     }
 
     //
@@ -255,3 +254,60 @@ function evenOrOdd(num)
     }
 
 }
+//////////////////EXTRA///////////////////////////
+function reverse(string)
+{
+    let stringArray = string.split('');
+    let wordReverse = [];
+    for(let i = stringArray.length - 1; i > -1; i--)
+    {
+        wordReverse.push(string[i]);
+    }
+    console.log(wordReverse);
+
+    let newWord = wordReverse.join('');
+    return newWord;
+}
+let word = prompt('Type a word');
+console.log(reverse(word));
+
+
+function add(a,b)
+{
+    return a + b;
+}
+function subtract(a, b)
+{
+    return a - b;
+}
+function multiply(a, b)
+{
+    return a * b;
+}
+function divide(a, b)
+{
+    return a/b;
+}
+function remainder(number, divisor)
+{
+    return number % divisor;
+}
+function square(a)
+{
+    return a * a;
+}
+ function sumOfSquares(a, b)
+ {
+     let sq1 = square(a);
+     let sq2 = square(b);
+
+     let sum = add(sq1, sq2);
+
+     return sum;
+
+ }
+
+ // function doMath(operator, a, b)
+ // {
+ //
+ // }
