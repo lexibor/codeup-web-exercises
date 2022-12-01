@@ -30,8 +30,33 @@ do
         console.log(`I cannot sell you ${conesSold}, I only have ${allCones}`);
         //continue;
 
-        //console.log('')
+
     }
         //i++;
 
 }while(allCones >= 0)
+
+console.log('')
+
+//////////////////////////EXTRA/////////////////////////////
+
+//first 50 fibonacci numbers
+
+console.log('The first 50 Fibonacci numbers are: ');
+let num1 = 0;
+let num2 = 1;
+let fib;
+
+for(let i = 0; i < 50; i++)
+{
+    console.log(fib);
+    fib = num1 + num2;
+    num2 = num1;
+    num1 = fib;
+}
+
+//first 50 prime numbers
+
+console.log('');
+console.log('The first 50 prime numbers are:');
+
