@@ -317,3 +317,46 @@ function square(a)
  // {
  //
  // }
+
+// write a function, abbrevToDay, that takes in a three-character abbreviation for the day of the week and returns the complete day of the week
+// Example: abbrevToDay('mon') returns 'Monday'
+
+function abbrevToDay(str)
+{
+    if(typeof str === 'string')
+    {
+        return 'That is not a valid string'
+    }
+
+    let day = str.toLowerCase();
+    switch(day)
+    {
+        case 'mon':
+            return 'Monday';
+            break;
+        case 'tue':
+            return 'Tuesday';
+            break;
+        case 'wed':
+            return 'Wednesday';
+            break;
+        case 'thu':
+            return 'Thursday';
+            break;
+        case 'fri':
+            return 'Friday';
+            break;
+        case 'sat':
+            return 'Saturday';
+            break;
+        case 'sun':
+            return 'Sunday';
+            break;
+        default:
+            return 'Please just enter the first 3 letters of a day of the week.'
+    }
+}
+
+console.log(abbrevToDay(34));
+console.log(abbrevToDay('monday'));
+console.log(abbrevToDay('wed'));
