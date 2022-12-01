@@ -14,32 +14,24 @@ console.log("All cones " + allCones);
 do
 {
     conesSold = Math.floor(Math.random() * 5) + 1;
-    console.log("cones sold " + conesSold);
-
-    allCones = allCones - conesSold;
-
-
-    if(allCones === 0)
-    {
-        console.log('Sold all cones!!');
-
-    }
-    else if(allCones > conesSold)
-    {
-        console.log(`${conesSold} cones sold... ${allCones} remaining`);
-        console.log('');
-
-    }
-    else if(allCones < 0)
-    {
+    //console.log("cones sold " + conesSold);
+        if(allCones === 0)
+        {
+            console.log('Sold all cones!! Yay!!!');
+            break;
+        } else if(allCones >= conesSold)
+        {
+            console.log(`${conesSold} cones sold... ${allCones} remaining`);
+            allCones = allCones - conesSold;
+            console.log("all cones " + allCones);
+            //console.log('');
+        }
+        else if(allCones < conesSold  || allCones !== 0) {
         console.log(`I cannot sell you ${conesSold}, I only have ${allCones}`);
-        continue;
-        console.log('');
+        //continue;
+
+        //console.log('')
     }
+        //i++;
 
-
-
-
-    console.log("all cones " + allCones);
-
-}while(allCones > 0)
+}while(allCones >= 0)

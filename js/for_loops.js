@@ -14,7 +14,7 @@ console.log('');
 
 for(let i = 0; i < 10; i++)
 {
-    let random = Math.floor((Math.random() * 200) + 20);
+    let random = Math.floor(Math.random() * (200 - 20 + 1)) + 20;
     console.log(`${random} is ${evenOrOdd(random)}`);
 }
 
