@@ -88,4 +88,88 @@
         return array[array.length -1];
     }
 
+    console.log('')
+
+
+////////////////////////////////////EXTRA////////////////////////////////////////////////
+
+
+    // Write a function, addEvenNums, that takes in an array of numbers
+    // and adds up only the even numbers in the array and returns the sum of the even numbers.
+    // Assume any array inputs will only contain valid number elements and be non-empty.
+
+    let numbers = [1, 2, 3, 4, 5];
+    console.log('sum of array is: ' + addEvenNums(arrOfRandomNums(10, 1, 15)));
+
+
+    console.log(addEvenNums(numbers));
+    function addEvenNums(arr)
+    {
+        let sum = 0;
+        for(let i = 0; i < arr.length; i++)
+        {
+            if(isEven(arr[i]))
+            {
+                sum += arr[i]
+            }
+            else
+            {
+                continue;
+            }
+
+        }
+
+        return sum;
+    }
+
+
+    console.log('');
+
+
+//     Write a function, checkIfNumInArray, that takes in an array of numbers and a number and returns the string
+// ‘input num in input array’ if the second argument is an element in the first argument array
+//     otherwise, the function should return the string ‘input num NOT in input array’
+
+    console.log('');
+   // let numbers = [2, 4, 6 ,8, 10];
+
+    console.log(checkIfNumInArray(arrOfRandomNums(10, 5, 15), 6));
+
+    function checkIfNumInArray(arr, num)
+    {
+        for(let i = 0; i < arr.length; i++)
+        {
+            if(num === arr[i])
+            {
+                return `${num} is in ${arr} array`;
+            }
+        }
+        return `${num} is NOT in ${arr} array`;
+    }
+
+/******** EXTRA FUNCTIONS *********************/
+
+    function arrOfRandomNums(length, min, max) //generates an array with a set length and set range of random nums
+    {
+        let arr = [];
+        for(let i = 0; i < length; i++)
+        {
+            arr.push(randomNum(min, max));
+        }
+        console.log(arr);
+        return arr;
+    }
+    //console.log(arrOfRandomNums(10, 3, 20));
+
+    function randomNum(min, max)
+    {
+        return  Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function isEven(num)
+    {
+        return num % 2 === 0;
+    }
+
+
 })();
