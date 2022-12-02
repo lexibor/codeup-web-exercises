@@ -1,14 +1,13 @@
 console.log('');
 let i = 1;
-while(i < 17)
+while(i <= 16)
 {
-    let num = Math.pow(2, i);
-    console.log(num);
+    console.log(Math.pow(2, i));
     i++
 }
 console.log('')
 
-let allCones = Math.floor(Math.random() * 50) + 50;
+let allCones = Math.floor(Math.random() * (100 - 50 + 1)) + 50;
 let conesSold;
 console.log("All cones " + allCones);
 do
@@ -19,19 +18,20 @@ do
         {
             console.log('Sold all cones!! Yay!!!');
             break;
-        } else if(allCones >= conesSold)
+        }
+        else if(allCones >= conesSold)
         {
-            console.log(`${conesSold} cones sold... ${allCones} remaining`);
             allCones = allCones - conesSold;
-            console.log("all cones " + allCones);
+            console.log(`${conesSold} cones sold... ${allCones} remaining`);
+
+            //console.log("all cones " + allCones);
             //console.log('');
         }
-        else if(allCones < conesSold  || allCones !== 0) {
+        else if(allCones < conesSold  || allCones !== 0)
+        {
         console.log(`I cannot sell you ${conesSold}, I only have ${allCones}`);
         //continue;
-
-
-    }
+        }
         //i++;
 
 }while(allCones >= 0)
@@ -85,3 +85,12 @@ for(let i = 0; i < 100; i++)
         console.log(i);
     }
 }
+
+// while(i <= 50)
+// {
+//     if(isPrime(i))
+//     {
+//         console.log(i);
+//
+//     }
+// }
