@@ -147,7 +147,64 @@
         return `${num} is NOT in ${arr} array`;
     }
 
-/******** EXTRA FUNCTIONS *********************/
+
+
+
+
+    // ============================= !! MINI-EXERCISE 1 !!
+
+    /*
+        1. Create an array the string elements 'April', 'May', 'June'
+        2. Add 'July' in the correct place of the array
+        3. Add 'March' in the correct place of the array
+        4. July is too hot; remove it from the array.
+        Console log the result and verify you get ['March', 'April', 'May', 'June']
+     */
+
+
+    let months = ['April', 'May', 'June'];
+
+    months.push('July');
+    console.log(months);
+
+    months.unshift('March');
+    console.log(months);
+
+    months.pop();
+    console.log(months)
+
+
+    // ============================= !! MINI-EXERCISE 2 !!
+
+    /*
+        1. Put the first names of everyone in your row in the order they are sitting (just your half of the classroom)
+        2. Log the alphabetical order of everyone in your row
+        3. Log the reverse alphabetical order of everyone in your row
+        4. Log everyone in the row in reverse order
+        5. Log an array of just the first two students in the row (left to right)
+        6. Log everyone in the row in a single string separated by spaces
+        7. Log everyone in the row in a single string separated by underscores
+     */
+
+
+    let classNames = ['Hung', 'Jason', 'Alexia', 'Jiabin'];
+    console.log(classNames);
+    console.log(classNames.slice().sort());
+    console.log(classNames.slice().sort().reverse());
+    console.log(classNames.slice().reverse())
+    console.log(classNames.slice(0, 2));
+    console.log(classNames.join('_'));
+
+    console.log('');
+
+
+
+
+
+
+
+
+    /******** EXTRA FUNCTIONS *********************/
 
     function arrOfRandomNums(length, min, max) //generates an array with a set length and set range of random nums
     {
