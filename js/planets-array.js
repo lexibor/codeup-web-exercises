@@ -51,4 +51,56 @@
     console.log("Sorting the planets array.");
     planets.sort();
     console.log(planets);
+
+
+
+
+
+
+
+
+
+
+
+    // ** Create a function that will take in a formatted string of numbers and return an array of
+    // phone numbers without any symbols. Console.log the output of the returned array.
+
+    /* EXAMPLE...
+
+        const phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
+
+        cleanPhoneNumbers(phoneNumbers);
+
+        the above code should output the following...
+
+           2105552020
+           2305552020
+           5125553030
+
+    */
+
+    const phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
+
+    console.log(phoneNumbers);
+
+    function cleanPhoneNumbers(input)
+    {
+        let arr = input.split('\n');
+
+        let commaString = arr.join(',');
+
+        commaString = commaString.replace(/-/g, '')
+
+        arr = commaString.split(',')
+
+        return arr.join('\n');
+    }
+
+    console.log(cleanPhoneNumbers(phoneNumbers));
+
+
+
+
+
+
 })();
