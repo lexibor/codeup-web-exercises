@@ -17,7 +17,7 @@
         lastName: 'Briones Ornelas',
         sayHello: function()
         {
-
+            return `Hello from ${this.firstName} ${this.lastName}`
         }
     };
 
@@ -31,8 +31,9 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
+    console.log(person.sayHello());
 
-
+    console.log('')
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -48,11 +49,27 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    shoppers.forEach(function(shopper){
+        if(shopper.amount > 200)
+        {
+            //console.log(shopper.name)
+            console.log(`${shopper.name} pays $${(shopper.amount - (shopper.amount * 0.12)).toFixed(2)} after the discount`)
+        }
+        else
+        {
+            //console.log(shopper.name)
+            console.log(`${shopper.name} does not get a discount :( he has to pay $${shopper.amount}`);
+        }
+    });
+
+
+    console.log('')
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -66,6 +83,46 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    // const books = [
+    //     {
+    //         title: 'Lord of the Rings',
+    //         author: {
+    //             firstName: 'JRR',
+    //             lastName: 'Tolkien'
+    //         }
+    //     },
+    //     {
+    //         title: 'Harry Potter',
+    //         author: {
+    //             firstName: 'JK',
+    //             lastName: 'Rowling'
+    //         }
+    //     },
+    //     {
+    //         title: "Howl's Moving Castle",
+    //         author: {
+    //             firstName: 'Diana Wynne',
+    //             lastName: 'Jones'
+    //         }
+    //     },
+    //     {
+    //         title: 'Of Mice and Men',
+    //         author: {
+    //             firstName: 'John',
+    //             lastName: 'Steinbeck'
+    //         }
+    //     },
+    //     {
+    //         title: "The Handmaid's Tale",
+    //         author: {
+    //             firstName: 'Margaret',
+    //             lastName: 'Atwood'
+    //         }
+    //     }
+    // ]
+
+    const books = [];
 
     /**
      * TODO:
@@ -92,6 +149,12 @@
      *      ...
      */
 
+    for(let i = 0; i < books.length; i++)
+    {
+        console.log(`Book #${i + 1}\nTitle: ${books[i].title}\nAuthor: ${books[i].author}\n---`);
+    }
+
+    console.log('')
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -102,5 +165,32 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook(title, author)
+    {
+        let book = {
+            title: title,
+            author: author
+        }
+
+        books.push(book)
+    }
+
+
+    createBook('Lord of The Rings', 'JRR Tolkien');
+    createBook('Harry Potter', 'JK Rowling');
+    createBook("Howl's Moving Castle", 'Diana Wynne Jones');
+    createBook("The Handmaid's Tale", 'Margaret Atwood');
+
+
+    function showBookInfo(obj)
+    {
+        for(let i = 0; i < obj.length; i++)
+        {
+            console.log(`Book #${i + 1}\nTitle: ${obj[i].title}\nAuthor: ${obj[i].author}\n---`);
+        }
+    }
+
+    showBookInfo(books);
 
 })();
