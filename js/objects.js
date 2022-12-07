@@ -173,14 +173,14 @@
             author: author
         }
 
-        books.push(book)
+        return book;
     }
 
 
-    createBook('Lord of The Rings', 'JRR Tolkien');
-    createBook('Harry Potter', 'JK Rowling');
-    createBook("Howl's Moving Castle", 'Diana Wynne Jones');
-    createBook("The Handmaid's Tale", 'Margaret Atwood');
+    books.push(createBook('Lord of The Rings', 'JRR Tolkien'));
+    books.push(createBook('Harry Potter', 'JK Rowling'));
+    books.push(createBook("Howl's Moving Castle", 'Diana Wynne Jones'));
+    books.push(createBook("The Handmaid's Tale", 'Margaret Atwood'));
 
 
     function showBookInfo(obj)
