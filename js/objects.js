@@ -199,10 +199,10 @@
     //     showBookInfo(book, i);
     // }))
 
-    function showBookInfo(obj, index)
+    function showBookInfo(book, index)
     {
         //let i = index - 1;
-            console.log(`Book #${index + 1}\nTitle: ${obj[index].title}\nAuthor: ${obj[index].author}\n---`);
+            console.log(`Book #${index + 1}\nTitle: ${book[index].title}\nAuthor: ${book[index].author}\n---`);
 
     }
 
