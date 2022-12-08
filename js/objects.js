@@ -58,14 +58,14 @@
     shoppers.forEach(function(shopper){
         if(shopper.amount > 200)
         {
-            let savings = shopper.amount * 0.12.toFixed(2);
-            let total = shopper.amount - (savings);
-            console.log(`${shopper.name} pays $${total} after the discount, they saved $${savings}`)
+            let savings = parseFloat(shopper.amount) * 0.12.toFixed(2);
+            let total = (parseFloat(shopper.amount) - (savings)).toLocaleString('en-US', {style: 'currency', currency: 'USD'});
+            console.log(`${shopper.name} pays ${total} after the discount, they saved $${savings}`)
         }
         else
         {
             //console.log(shopper.name)
-            console.log(`${shopper.name} does not get a discount :( they have to pay $${shopper.amount}`);
+            console.log(`${shopper.name} does not get a discount :( they have to pay ${shopper.amount}`);
         }
     });
 
@@ -123,7 +123,6 @@
     //     }
     // ]
 
-    const books = [];
 
     /**
      * TODO:
@@ -150,12 +149,14 @@
      *      ...
      */
 
-    for(let i = 0; i < books.length; i++)
-    {
-        //console.log(`Book #${i + 1}\nTitle: ${books[i].title}\nAuthor: ${books[i].author}\n---`);
-        showBookInfo(books, i);
+    // for(let i = 0; i < books.length; i++)
+    // {
+    //     //console.log(`Book #${i + 1}\nTitle: ${books[i].title}\nAuthor: ${books[i].author}\n---`);
+    //     showBookInfo(books, i);
+    //
+    // }
 
-    }
+
 
     console.log('')
     /**
@@ -179,12 +180,24 @@
         return book;
     }
 
+    const books = [
+        createBook('Lord of The Rings: The Fellowship of the Ring', 'J.R.R Tolkien'),
+        createBook('The Silmarillion', 'J.R.R Tolkien'),
+        createBook("Howl's Moving Castle", 'Diana Wynne Jones'),
+        createBook("The Handmaid's Tale", 'Margaret Atwood'),
+        createBook("Of Mice and Men", 'John Steinbeck')
+    ];
 
-    books.push(createBook('Lord of The Rings: The Fellowship of the Ring', 'JRR Tolkien'));
-    books.push(createBook('The Silmarillion', 'JRR Tolkien'));
-    books.push(createBook("Howl's Moving Castle", 'Diana Wynne Jones'));
-    books.push(createBook("The Handmaid's Tale", 'Margaret Atwood'));
+    // books.push(createBook('Lord of The Rings: The Fellowship of the Ring', 'J.R.R Tolkien'));
+    // books.push(createBook('The Silmarillion', 'J.R.R Tolkien'));
+    // books.push(createBook("Howl's Moving Castle", 'Diana Wynne Jones'));
+    // books.push(createBook("The Handmaid's Tale", 'Margaret Atwood'));
+    // books.push(createBook("Of Mice and Men", 'John Steinbeck'));
 
+
+    // books.forEach((function(book, i){
+    //     showBookInfo(book, i);
+    // }))
 
     function showBookInfo(obj, index)
     {
