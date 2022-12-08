@@ -58,13 +58,14 @@
     shoppers.forEach(function(shopper){
         if(shopper.amount > 200)
         {
-            //console.log(shopper.name)
-            console.log(`${shopper.name} pays $${(shopper.amount - (shopper.amount * 0.12)).toFixed(2)} after the discount`)
+            let savings = shopper.amount * 0.12.toFixed(2);
+            let total = shopper.amount - (savings);
+            console.log(`${shopper.name} pays $${total} after the discount, they saved $${savings}`)
         }
         else
         {
             //console.log(shopper.name)
-            console.log(`${shopper.name} does not get a discount :( he has to pay $${shopper.amount}`);
+            console.log(`${shopper.name} does not get a discount :( they have to pay $${shopper.amount}`);
         }
     });
 
