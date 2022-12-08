@@ -151,7 +151,9 @@
 
     for(let i = 0; i < books.length; i++)
     {
-        console.log(`Book #${i + 1}\nTitle: ${books[i].title}\nAuthor: ${books[i].author}\n---`);
+        //console.log(`Book #${i + 1}\nTitle: ${books[i].title}\nAuthor: ${books[i].author}\n---`);
+        showBookInfo(books, i);
+
     }
 
     console.log('')
@@ -177,20 +179,25 @@
     }
 
 
-    books.push(createBook('Lord of The Rings', 'JRR Tolkien'));
-    books.push(createBook('Harry Potter', 'JK Rowling'));
+    books.push(createBook('Lord of The Rings: The Fellowship of the Ring', 'JRR Tolkien'));
+    books.push(createBook('The Silmarillion', 'JRR Tolkien'));
     books.push(createBook("Howl's Moving Castle", 'Diana Wynne Jones'));
     books.push(createBook("The Handmaid's Tale", 'Margaret Atwood'));
 
 
-    function showBookInfo(obj)
+    function showBookInfo(obj, index)
     {
-        for(let i = 0; i < obj.length; i++)
-        {
-            console.log(`Book #${i + 1}\nTitle: ${obj[i].title}\nAuthor: ${obj[i].author}\n---`);
-        }
+        //let i = index - 1;
+            console.log(`Book #${index + 1}\nTitle: ${obj[index].title}\nAuthor: ${obj[index].author}\n---`);
+
     }
 
-    showBookInfo(books);
+    //showBookInfo(books, 1);
+    for(let i = 0; i < books.length; i++)
+    {
+        //console.log(`Book #${i + 1}\nTitle: ${books[i].title}\nAuthor: ${books[i].author}\n---`);
+        showBookInfo(books, i);
+
+    }
 
 })();
