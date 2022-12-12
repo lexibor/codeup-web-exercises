@@ -8,10 +8,42 @@
 
   <h1>Register With Us</h1>
 
-  <form method="post">
+  <form method="post" action="https://request-inspector.glitch.me/">
 
-    <input type="text" name="email" placeholder="Please enter your email.">
-    <input type="password" name="password" placeholder="Please enter your password.">
+      <label for="email">E-mail</label>
+      <input id="email" type="text" name="email" placeholder="Enter email">
+      <label for="password">Password</label>
+      <input id="password" type="password" name="password" placeholder="Enter password">
+
+      <br>
+      <br>
+
+      <label for="bio">Bio</label>
+      <textarea id="bio" name="bio"></textarea>
+
+      <br>
+      <br>
+
+      <label>How did you hear about us<br>
+          <input type="checkbox" name="aboutUs" value="billboard"> Billboard<br>
+          <input type="checkbox" name="aboutUs" value="radio advertisement"> Radio Ad<br>
+          <input type="checkbox" name="aboutUs" value="internet advertisement"> Internet Ad<br>
+          <input type="checkbox" name="aboutUs" value="other"> Other<br>
+      </label>
+
+      <br>
+
+      <label for="browser">What web browser are you using</label>
+
+      <select id="browser" name="webBrowser">
+          <option value="google">Google</option>
+          <option value="firefox">Firefox</option>
+          <option value="safari">Safari</option>
+          <option value="internetEx">Internet Explorer</option>
+      </select>
+
+      <br>
+      <button>Submit</button>
 
   </form>
 
