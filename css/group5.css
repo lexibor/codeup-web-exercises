@@ -1,0 +1,137 @@
+/* @keyframes tells the program what you want your
+    animation to do from point A to point B */
+
+@keyframes rainbow {
+    0%  {background-color: red;}
+    15% {background-color: yellow}
+    25% {background-color: orange;}
+    35% {background-color: green}
+    50% {background-color: blue;}
+    90% {background-color: purple;}
+    100%{background-color: red;}
+}
+
+@keyframes slide
+{
+    from{
+        margin-left: 89%;
+        color: red
+    }
+    to{
+        margin-left: 0%;
+        color: lightgreen
+    }
+}
+@keyframes size-change
+{
+    from{font-size: 20px}
+    to{font-size: 50px}
+}
+
+@keyframes rotate
+{
+    from{rotate: 0deg}
+    to{rotate: 360deg}
+}
+
+/*@keyframes blur*/
+/*{*/
+/*    from{opacity: 100%}*/
+/*    to{opacity: 50%}*/
+/*}*/
+
+div.slide
+{
+    font-size: 30px;
+    color: lightgreen;
+    animation-duration: 1s;
+    animation-name: slide;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+div.size-change
+{
+    -webkit-text-stroke: .5px white;
+    animation-name: size-change;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    /*animation: size-change 3s infinite alternate;*/
+
+}
+
+div.rotate
+{
+    width: 80px;
+    height: 80px;
+    background-color: forestgreen;
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+div.colors {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+}
+
+
+/******************************** HIDDEN VS NONE **************************/
+.group5display{
+    font-size: 50px;
+    color: red;
+    /*display: none;*/
+    /*visibility: hidden;*/
+}
+
+/************************ FADED IMAGE ***********************************/
+.fade-in-image:hover {
+    opacity: 50%;
+    transition: opacity 2s;
+}
+
+/*.fade-in-image*/
+/*{*/
+/*    animation-duration: 5s;*/
+/*    animation-delay: ;*/
+/*    animation-iteration-count: infinite;*/
+/*    animation-name: blur;*/
+/*}*/
+
+img.background {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+    filter: blur(5px);
+}
+
+.background {
+    background-image: url("/img/Mercedes.jpeg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.blur {
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 100%;
+}
+.white-style{
+    color: white;
+    font-size: 25px;
+    width: 400px
+}

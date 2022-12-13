@@ -1,5 +1,32 @@
 .fancy-header
 {
-    color: rebeccapurple;
+    text-align: center;
+    color: #99334b;
     text-decoration: underline;
+}
+
+.section-header
+{
+    color: #862732;
+    text-decoration: underline;
+}
+body
+{
+    background-color: #f6e7d5;
+    background-image: url("https://images.unsplash.com/photo-1629968417850-3505f5180761?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cGFwZXIlMjB0ZXh0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
+    font-family: 'Teko', sans-serif;
+}
+
+.bullet-style
+{
+    list-style: square;
+}
+table.text
+{
+    border-style: solid;
+}
+
+td
+{
+    padding-bottom: 1px;
 }
