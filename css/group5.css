@@ -44,7 +44,7 @@ div.slide
 {
     font-size: 30px;
     color: lightgreen;
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-name: slide;
     animation-iteration-count: infinite;
     animation-direction: alternate;
