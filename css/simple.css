@@ -1,0 +1,87 @@
+:root
+{
+    --main-text-color: white;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+.page-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.row
+{
+    display:flex;
+    flex-direction: column;
+}
+.logo
+{
+    color: var(--main-text-color);
+    margin-top: 1em;
+    margin-left: 1em;
+    font-size: 1.5em;
+    font-weight: lighter;
+
+}
+
+.coming-soon
+{
+    display:flex;
+    color: var(--main-text-color);
+    /*text-align: center;*/
+    margin:auto;
+    font-size: 4em;
+    font-weight: lighter;
+    padding-top: 20%;
+
+
+}
+.days-left
+{
+    display:flex;
+    color: var(--main-text-color);
+    /*text-align: center;*/
+    margin: auto;
+    font-size: 1em;
+    font-weight: lighter;
+    margin-top: 1em;
+    /*padding-top: 5%;*/
+}
+.bottom-text
+{
+    display:flex;
+    color: var(--main-text-color);
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    margin: 0 1em;
+
+}
+
+
+hr
+{
+    color: var(--main-text-color);
+    margin-top: 1em;
+    width: 15%;
+}
+
+body
+{
+    background-color: black;
+    background-image: url("/img/forest.jpeg");
+    background-size: cover;
+    font-family: Monospaced, sans-serif;
+}

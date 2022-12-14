@@ -8,7 +8,7 @@ body, html {
 
 .message
 {
-    margin: 1em;
+    margin: 1em auto;
     padding: .5em;
     width: 70%;
     border: 1px solid lightgrey;
