@@ -18,21 +18,29 @@ body, html {
 
 .message-info
 {
-    background-color: #CEDFFF;
-    color: #41399B;
+    --main-bg-color: #CEDFFF;
+    --main-text-color: #41399B;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
 }
 .message-success
 {
-    background-color: #CFF3DA;
-    color: #3A8556;
+    --main-bg-color: #CFF3DA;
+    --main-text-color: #3A8556;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
 }
 .message-warning
 {
-    background-color: #FDFBC9;
-    color: #85700A;
+    --main-bg-color: #FDFBC9;
+    --main-text-color: #85700A;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
 }
 .message-error
 {
-    background-color: #FCD2D7;
-    color: #851F35;
+    --main-bg-color: #FCD2D7;
+    --main-text-color: #851F35;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
 }
