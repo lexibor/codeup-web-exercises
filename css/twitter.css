@@ -27,7 +27,8 @@ a {
 }
 .top-nav {
     background: var(--light-bg);
-    position: fixed;
+    /*position: fixed;*/
+    z-index: 1000;
     width: 100%;
 }
 .nav {
@@ -55,14 +56,61 @@ a {
 
 .profile-image
 {
-    z-index: 1000;
+    top: 19em;
     position: absolute;
 }
 
 .profile-form
 {
+    padding: 1em 0;
     line-height: 80px;
     float: right;
+}
+
+.profile-details
+{
+    float: left;
+    width: calc(25% - .5em);
+    margin: 0 .5em;
+}
+.timeline
+{
+    float: left;
+    width: calc(50% - .5em);
+    margin: 0 .5em;
+}
+
+.who-to-follow
+{
+    float: right;
+    width: calc(23% - .5em);
+    margin: 0 .5em;
+}
+
+.container
+{
+    margin: 2em 0;
+}
+
+.media
+{
+    width: 100%;
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--separator-color);
+    padding: .5em;
+    overflow: visible;
+}
+
+.media-image
+{
+    width: 50px;
+    float: left;
+    margin-top: 1.33em;
+}
+
+.media-body
+{
+    width: calc(100% - 2px);
 }
 
 
