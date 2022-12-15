@@ -73,6 +73,18 @@ a {
     width: calc(25% - .5em);
     margin: 0 .5em;
 }
+
+.profile-items
+{
+    list-style: none;
+    padding: 0;
+}
+
+.profile-entry
+{
+    margin: .5em;
+}
+
 .timeline
 {
     float: left;
@@ -98,7 +110,7 @@ a {
     background-color: var(--light-bg);
     border-bottom: 1px solid var(--separator-color);
     padding: .5em;
-    overflow: visible;
+    overflow: auto;
 }
 
 .media-image
@@ -110,7 +122,8 @@ a {
 
 .media-body
 {
-    width: calc(100% - 2px);
+    float: right;
+    width: calc(100% - 55px);
 }
 
 
