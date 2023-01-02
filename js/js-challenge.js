@@ -103,3 +103,10 @@ function returnLastTwoChars(str)
 }
 
 console.log(returnLastTwoChars('hello'));
+
+function returnLastCharsReversed(str, num)
+{
+    return str.slice(str.length - num).split('').reverse().join('');
+}
+
+console.log(returnLastCharsReversed('codeup', 3));
