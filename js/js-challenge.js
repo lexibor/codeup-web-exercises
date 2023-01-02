@@ -95,3 +95,11 @@ function returnLongestPetName(arr)
 
 }
 console.log(returnLongestPetName(pets)); //returns Mr. Salmon
+
+
+function returnLastTwoChars(str)
+{
+    return str.slice(str.length - 2);
+}
+
+console.log(returnLastTwoChars('hello'));
