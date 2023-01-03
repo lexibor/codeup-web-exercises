@@ -99,14 +99,39 @@ console.log(returnLongestPetName(pets)); //returns Mr. Salmon
 
 function returnLastTwoChars(str)
 {
-    return str.slice(str.length - 2);
+    return str.slice(-2);
 }
 
 console.log(returnLastTwoChars('hello'));
 
 function returnLastCharsReversed(str, num)
 {
-    return str.slice(str.length - num).split('').reverse().join('');
+    return str.slice(-num).split('').reverse().join('');
 }
 
 console.log(returnLastCharsReversed('codeup', 3));
+
+
+// ================================= WARM UP
+// Write a function, iBeforeE that takes in a string and returns the string with any ‘ei’ characters replaced with ‘ie’.
+// iBeforeE(‘ei’) // returns ‘ie’
+// iBeforeE(‘height’) // returns ‘hieght’
+// iBeforeE(‘heist’) // returns ‘hiest’
+// iBeforeE(‘their’) // returns ‘thier’
+// iBeforeE(‘theirtheir’) // returns ‘thierthier’
+
+
+function iBeforeE(str)
+{
+    let newStr = '';
+    if(str.includes('ei'))
+    {
+        newStr =  str.replace('ei', 'ie');
+    }
+
+    return newStr;
+}
+
+console.log(iBeforeE('ei'));
+console.log(iBeforeE('height'));
+console.log(iBeforeE('theirtheir'));
