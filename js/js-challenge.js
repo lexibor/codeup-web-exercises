@@ -126,7 +126,7 @@ function iBeforeE(str)
     let newStr = '';
     if(str.includes('ei'))
     {
-        newStr =  str.replace('ei', 'ie');
+        newStr =  str.replaceAll('ei', 'ie');
     }
 
     return newStr;
