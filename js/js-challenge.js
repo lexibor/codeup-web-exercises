@@ -135,3 +135,26 @@ function iBeforeE(str)
 console.log(iBeforeE('ei'));
 console.log(iBeforeE('height'));
 console.log(iBeforeE('theirtheir'));
+
+// ================================= WARM UP
+// Create a function, filterList, that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+// filterList([1,2,‘a’,‘b’]) // returns [1,2]
+// filterList([1,‘a’,‘b’,0,15]) // returns [1,0,15]
+// filterList([1,2,‘aasf’,‘1’,‘123’,123]) // returns [1,2,123]
+
+function filterList(arr)
+{
+    let numArr = [];
+    arr.forEach(function(num){
+        if(typeof num !== 'string' && num > 0)
+        {
+            numArr.push(num);
+        }
+    });
+
+    return numArr.join(', ');
+}
+
+console.log(filterList([1,2,'a','b'])); // returns [1,2]
+console.log(filterList([1,'a','b',0,15]));// returns [1,0,15]
+console.log(filterList([1,2,'aasf','1','123',123,-1])); // returns [1,2,123]

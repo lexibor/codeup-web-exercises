@@ -44,7 +44,7 @@
   </div>
 </nav>
 
-<div class="container-fluid">
+<div class="container px-5">
     <div class="d-flex jumbotron">
         <div class="align-self-center flex-grow-1 bg-light bg-opacity-50 d-none d-md-block fs-2">
             <p class="text-center mb-0">Welcome to Pizza World!</p>
@@ -121,11 +121,6 @@
                         </div>
                     </div>
                     <div class="d-flex card-footer">
-<!--                        <a href="#" class="list-group-item list-group-item-action">-->
-<!--                            <div class="d-flex w-100 justify-content-between">-->
-
-<!--                            </div>-->
-<!--                        </a>-->
                         <div class="flex-grow-1 text-end">
                             <a class="btn btn-primary" role="button" href="#nav-cheese">Next Step ></a>
                         </div>
@@ -134,12 +129,12 @@
             </div>
         </div>
 
-        <div class="tab-pane fade show active flex-grow-1" id="nav-cheese" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="1">
+        <div class="tab-pane fade show flex-grow-1" id="nav-cheese" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
             <div class="card">
                 <div class="list-group">
                     <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">Choose Size and Crust</h5>
+                            <h5 class="mb-1">Choose Cheese and Sauce</h5>
                         </div>
                     </a>
                     <div href="#" class="list-group-item list-group-item-action">
@@ -151,7 +146,7 @@
                                     <li class="list-group-item">
                                         <div class="dropdown">
                                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                trsgsgfd
+                                                Cheese
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="">Light</a></li>
@@ -171,7 +166,7 @@
                                     <li class="list-group-item">
                                         <div class="dropdown">
                                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                ooooo
+                                                Sauce
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="">Tomato</a></li>
@@ -187,21 +182,115 @@
                         </div>
                     </div>
                     <div class="d-flex card-footer">
-                        <!--                        <a href="#" class="list-group-item list-group-item-action">-->
-                        <!--                            <div class="d-flex w-100 justify-content-between">-->
-
-                        <!--                            </div>-->
-                        <!--                        </a>-->
                         <div class="flex-grow-1 text-end">
-                            <a class="btn btn-primary" role="button" for="nav-cheese">Next Step ></a>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-primary">Previous</button>
+                                <button type="button" class="btn btn-primary">Next</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="tab-pane fade" id="nav-topping" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="2">
-            topping
+        <div class="tab-pane fade show flex-grow-1" id="nav-topping" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+            <div class="card">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Choose Toppings</h5>
+                        </div>
+                    </a>
+                    <div href="#" class="list-group-item list-group-item-action">
+                        <div class="column">
+                            <div class="card mb-4">
+                                <div class="card-header">Choose Meats</div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="size" id="beef">
+                                            <label class="form-check-label" for="beef">
+                                                Beef
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="size" id="ham">
+                                            <label class="form-check-label" for="ham">
+                                                Ham
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="size" id="steak">
+                                            <label class="form-check-label" for="steak">
+                                                Philly Steak
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="size" id="bacon">
+                                            <label class="form-check-label" for="bacon">
+                                                Bacon
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div><!--Meats -->
+
+                            <div class="card">
+                                <div class="card-header">Choose Non-meats</div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="size" id="grpepper">
+                                            <label class="form-check-label" for="grpepper">
+                                                Green Peppers
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="size" id="mush">
+                                            <label class="form-check-label" for="mush">
+                                                Mushrooms
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="size" id="onion">
+                                            <label class="form-check-label" for="onion">
+                                                Onion
+                                            </label>
+                                        </div>
+
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="size" id="jpeppers">
+                                            <label class="form-check-label" for="jpeppers">
+                                                Japaleño Peppers
+                                            </label>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </div> <!-- Non-meat -->
+                        </div>
+                    </div>
+                    <div class="d-flex card-footer">
+                        <div class="flex-grow-1 text-end">
+                            <button class="btn btn-primary">
+                                Checkout <img src="img/icons8-cart-48.png" width="30" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
