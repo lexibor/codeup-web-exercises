@@ -231,10 +231,9 @@
 function getUserCredentials(userArr)
 {
     let objArr = [];
-    let newObj;
 
     userArr.forEach(function(arr){
-        newObj = {
+        let newObj = {
             username: arr.username,
             password: arr.password
 
