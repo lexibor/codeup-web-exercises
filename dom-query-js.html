@@ -5,10 +5,7 @@
 <body data-new-gr-c-s-check-loaded="14.1093.0" data-gr-ext-installed="">
 
 <h1 id="main-header">Hello World!</h1>
-<button id="btn1">Change 'Hello Again'</button>
-<button id="btn2">Change subheader to blue</button>
-<button id="btn3">Grey list items</button>
-<button id="btn4">Mission Accomplished</button>
+
 
 <ul>
     <li data-dbid="1">Item 1</li>
@@ -27,24 +24,11 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
-<p class="sub-paragraph">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat. Duis aute irure dolor in
-    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum.
-</p>
-<p class="sub-paragraph">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat. Duis aute irure dolor in
-    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum.
-</p>
+
+<button id="btn1">Change 'Hello Again'</button>
+<button id="btn2">Change subheader to blue</button>
+<button id="btn3">Grey list items</button>
+<button id="btn4">Mission Accomplished</button>
 
 <script>
     (function() {
@@ -72,6 +56,27 @@
 
         btn2.addEventListener('click', blueSH);
 
+        const greyLi = () =>
+        {
+            var listItems = document.getElementsByTagName('li');
+
+            for(let i = 0; i < listItems.length; i += 2)
+            {
+                listItems[i].style.color = 'grey';
+            }
+        }
+
+        btn3.addEventListener('click', greyLi);
+
+        const missionAccomplished = () =>
+        {
+            let subParagraphs = document.getElementsByClassName('sub-paragraph');
+
+            subParagraphs[0].innerHTML = 'Mission Accomplished!';
+        }
+
+        btn4.addEventListener('click', missionAccomplished);
+
         // TODO: Uncomment next line and get the main header element by id
         //  var mainHeader = document.getElementById('main-header');
 
@@ -87,14 +92,14 @@
         // subHeader.style.color = 'blue';
 
         // TODO: Uncomment the next line and get all list items
-         var listItems = document.getElementsByTagName('li');
+          var listItems = document.getElementsByTagName('li');
 
         // TODO: Set text color on every other list item to grey
 
-        for(let i = 0; i < listItems.length; i += 2)
-        {
-            listItems[i].style.color = 'grey';
-        }
+        // for(let i = 0; i < listItems.length; i += 2)
+        // {
+        //     listItems[i].style.color = 'grey';
+        // }
 
 
         // TODO: Set text color of li with dbid = 1 to blue
@@ -109,10 +114,10 @@
         }
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-         let subParagraphs = document.getElementsByClassName('sub-paragraph');
+        //  let subParagraphs = document.getElementsByClassName('sub-paragraph');
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = 'Mission Accomplished!';
+        // subParagraphs[0].innerHTML = 'Mission Accomplished!';
 
     })();
 </script>
