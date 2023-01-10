@@ -5,6 +5,11 @@
 <body data-new-gr-c-s-check-loaded="14.1093.0" data-gr-ext-installed="">
 
 <h1 id="main-header">Hello World!</h1>
+<button id="btn1">Change 'Hello Again'</button>
+<button id="btn2">Change subheader to blue</button>
+<button id="btn3">Grey list items</button>
+<button id="btn4">Mission Accomplished</button>
+
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -44,19 +49,42 @@
 <script>
     (function() {
         "use strict";
+
+        let btn1 = document.getElementById('btn1');
+        let btn2 = document.getElementById('btn2');
+        let btn3 = document.getElementById('btn3');
+        let btn4 = document.getElementById('btn4');
+
+
+        const coolJS = () =>
+        {
+            var mainHeader = document.getElementById('main-header');
+            mainHeader.innerHTML = "JavaScript is Cool";
+        }
+
+        btn1.addEventListener('click', coolJS);
+
+        const blueSH = () =>
+        {
+            var subHeader = document.getElementById('sub-header');
+            subHeader.style.color = 'blue';
+        }
+
+        btn2.addEventListener('click', blueSH);
+
         // TODO: Uncomment next line and get the main header element by id
-         var mainHeader = document.getElementById('main-header');
+        //  var mainHeader = document.getElementById('main-header');
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
-        mainHeader.innerHTML = "JavaScript is Cool";
+        // mainHeader.innerHTML = "JavaScript is Cool";
 
 
         // TODO: Uncomment the next line and get the sub header element by id
-         var subHeader = document.getElementById('sub-header');
+        //  var subHeader = document.getElementById('sub-header');
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = 'blue';
+        // subHeader.style.color = 'blue';
 
         // TODO: Uncomment the next line and get all list items
          var listItems = document.getElementsByTagName('li');
