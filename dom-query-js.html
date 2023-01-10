@@ -25,10 +25,13 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<br>
+
 <button id="btn1">Change 'Hello Again'</button>
 <button id="btn2">Change subheader to blue</button>
 <button id="btn3">Grey list items</button>
 <button id="btn4">Mission Accomplished</button>
+<button id="btn5">Nyan Cat</button>
 
 <script>
     (function() {
@@ -38,6 +41,8 @@
         let btn2 = document.getElementById('btn2');
         let btn3 = document.getElementById('btn3');
         let btn4 = document.getElementById('btn4');
+        let btn5 = document.getElementById('btn5');
+
 
 
         const coolJS = () =>
@@ -76,6 +81,24 @@
         }
 
         btn4.addEventListener('click', missionAccomplished);
+
+        const nyanCat = () =>
+        {
+            let subParagraph = document.getElementsByClassName('sub-paragraph')[0];
+
+            let newCat = document.createElement('img');
+            newCat.src = 'img/cat-space.gif';
+
+            subParagraph.parentNode.replaceChild(newCat, subParagraph);
+
+
+
+            console.log('test');
+
+
+        }
+
+        btn5.addEventListener('click', nyanCat);
 
         // TODO: Uncomment next line and get the main header element by id
         //  var mainHeader = document.getElementById('main-header');
