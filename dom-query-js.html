@@ -86,12 +86,20 @@
         {
             let subParagraph = document.getElementsByClassName('sub-paragraph')[0];
 
+
+
+            // let allElements = document.body.getElementsByTagName("*");
+            // for (let i = 0; i < allElements.length; i++) {
+            //     console.log(allElements[i])
+            //     if (allElements[i].tagName !== "img") {
+            //         allElements[i].remove();
+            //     }
+            // }
+
             let newCat = document.createElement('img');
             newCat.src = 'img/cat-space.gif';
 
             subParagraph.parentNode.replaceChild(newCat, subParagraph);
-
-
 
             console.log('test');
 
