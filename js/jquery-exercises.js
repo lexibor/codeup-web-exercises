@@ -51,17 +51,17 @@ $(function(){
 // });
 
 // jQuery way of stacking events
-$("#btn").on({
-  click: function () {
-    alert("Button clicked!");
-  },
-  mouseenter: function () {
-    $(this).css("background-color", "green");
-  },
-  mouseleave: function () {
-    $(this).css("background-color", "");
-  },
-});
+// $("#btn").on({
+//   click: function () {
+//     alert("Button clicked!");
+//   },
+//   mouseenter: function () {
+//     $(this).css("background-color", "green");
+//   },
+//   mouseleave: function () {
+//     $(this).css("background-color", "");
+//   },
+// });
 
 
 
