@@ -1,0 +1,63 @@
+body
+{
+    background-color: black;
+    color: whitesmoke;
+
+}
+
+#tv-filter
+{
+    position: relative;
+    z-index: 9999;
+    opacity: 0.2;
+    background-repeat: repeat;
+}
+
+#title
+{
+    margin:1em;
+    font-size: 2em;
+}
+
+.reset
+{
+    margin: .25em;
+}
+
+.page-wrapper.overlay
+{
+    background-image: url("/img/full-white-stripes-background-as-a-classic-glitch-overlay-effect-the-old-tv-noise-static-texture-on-a-black-background-a-retro-texture-collection-free-photo.webp");
+}
+
+
+
+.container.under
+{
+    position: relative;
+    z-index: 0;
+}
+
+
+/******** CHECKING ANIMATION *************/
+.waviy {
+    position: relative;
+    font-size: 1em;
+}
+.waviy span {
+    /*font-family: 'Alfa Slab One', cursive;*/
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    animation: waviy 2s infinite;
+    animation-delay: calc(.1s * var(--i));
+
+}
+@keyframes waviy {
+    0%, 40%, 100% {
+        transform: translateY(0)
+    }
+    20% {
+        transform: translateY(-10px)
+    }
+}

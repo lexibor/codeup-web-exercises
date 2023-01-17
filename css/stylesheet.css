@@ -31,6 +31,7 @@
     display:flex;
     flex-direction: column;
     flex: 1 0;
+    align-items: center;
 }
 /* OPTIONAL COMBO CLASS TO MAKE A COLUMN SHRINK INSTEAD OF GROW */
 .column.col-shrink {
