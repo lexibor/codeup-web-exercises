@@ -17,6 +17,7 @@ function resetAll()
     $('.big-fuzz').hide();
     $('.victory').hide();
     $('.success').hide();
+    $('.code').show();
 
     $('audio#lost')[0].pause();
     $('audio#won')[0].pause();
@@ -32,6 +33,7 @@ function resetAll()
         $('.big-fuzz').hide();
         $('.victory').hide();
         $('.success').hide();
+        $('.code').hide();
 
         for(let i = 0; i < sequence.length; i++)
         {
