@@ -17,6 +17,7 @@ $(function(){
         $('.waviy').show();
         $('.reset').hide();
         $('body').css('background-color', '');
+        $('.sad-face').hide();
 
         for(let i = 0; i < sequence.length; i++)
         {
@@ -27,7 +28,7 @@ $(function(){
                $('.reset').show();
                $('.sad-face').show();
 
-               $('body').css('background-color', 'red');
+               // $('body').css('background-color', 'red');
 
             }
 
