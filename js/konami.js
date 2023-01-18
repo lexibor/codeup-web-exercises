@@ -1,14 +1,27 @@
 $(function(){
     "use strict";
-    //38 == up, 40 == down, 37 == left, 39 == right, 66 == b, 65 == a, 13 == enter
+
+    resetAll();
+
+    //38 == up, 40 == down, 37 == left, 39 == right, 66 == b, 65 == a, 13 == enter, 27 == esc
 
     // array sequence [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13]
     let konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
     let sequence = [];
 
+
+function resetAll()
+{
     $('.waviy').hide();
     $('.reset').hide();
-    $('.sad-face').hide();
+    $('.big-fuzz').hide();
+    $('.victory').hide();
+    $('.success').hide();
+
+    $('audio#lost')[0].pause();
+    $('audio#won')[0].pause();
+
+}
 
     $(document).keydown(function(event){
         console.log(event.keyCode);
@@ -16,8 +29,9 @@ $(function(){
 
         $('.waviy').show();
         $('.reset').hide();
-        $('body').css('background-color', '');
-        $('.sad-face').hide();
+        $('.big-fuzz').hide();
+        $('.victory').hide();
+        $('.success').hide();
 
         for(let i = 0; i < sequence.length; i++)
         {
@@ -26,9 +40,17 @@ $(function(){
                 sequence = [];
                $('.waviy').hide();
                $('.reset').show();
-               $('.sad-face').show();
+               $('.big-fuzz').show();
 
                // $('body').css('background-color', 'red');
+
+                $('audio#lost')[0].play();
+
+
+                if(event.keyCode == 91)
+                {
+                    $('audio#lost')[0].pause();
+                }
 
             }
 
@@ -38,11 +60,21 @@ $(function(){
         {
             console.log('correct');
             $('.waviy').hide();
+            $('.success').show();
+            $('.victory').show();
+
+            $('audio#won')[0].play();
+
         }
         else
         {
             console.log('checking....');
 
+        }
+
+        if(event.keyCode === 27)
+        {
+            resetAll();
         }
 
     });

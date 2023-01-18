@@ -10,25 +10,45 @@ body
 
 #title
 {
-    margin:1em;
+    margin: .4em 0;
     font-size: 5em;
 }
 
+
+/************** MESSAGES UNDER 'KONAMI CODE' *****************/
+
 .reset
 {
-    margin: .25em;
+    margin: .40em;
+    font-size: 1.5em;
+}
+.success
+{
+    margin: .40em;
+    font-size: 1.5em;
 }
 
 
+/************* CONTRA GIFS *****************/
+
+.big-fuzz
+{
+    margin: 2em 0;
+    opacity: .8;
+}
+
+.victory
+{
+    margin: 2em 0;
+    opacity: .8;
+}
+
+
+/******************* CENTERING AND CRT TV IMAGE ********************/
 
 .page-wrapper.overlay
 {
-    /*background-image: url("/img/full-white-stripes-background-as-a-classic-glitch-overlay-effect-the-old-tv-noise-static-texture-on-a-black-background-a-retro-texture-collection-free-photo.webp");*/
-    /*background-size: cover;*/
-    /*z-index: 9999;*/
-
     justify-content: center;
-
 }
 
 .overlay
@@ -207,10 +227,13 @@ body
 
 
 
-/******** CHECKING ANIMATION *************/
+/******** 'CHECKING' ANIMATION *************/
+/***** FROM https://alvarotrigo.com/blog/css-text-animations/ *************/
 .waviy {
     position: relative;
     font-size: 2em;
+
+    margin: .5em 0;
 }
 .waviy span {
     /*font-family: 'Alfa Slab One', cursive;*/
