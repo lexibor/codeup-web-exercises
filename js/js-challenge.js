@@ -267,11 +267,93 @@
 
 // This loop should print the numbers from 0 through 9 in the console
 
-for (let i = 0; i < 10; i++) {
-    console.log("The value of i is " + i);
-    // i++;
-}
+// for (let i = 0; i < 10; i++) {
+//     console.log("The value of i is " + i);
+//     // i++;
+// }
 
 // desired output : 0, 1 ,2,  3, 4, 5, 6, 7, 8, 9
 
+//
+// ================================= WARM UP
+//
+// // Write a function that takes a neighborhood object and determines if it is desirable. A neighborhood is desirable if the median home price is less than 300000, crime rates are low, and the total rating of schools is at least 24.
+//
+// // example data...
+//
+const neighborhood1 = {
+    neighborhood: "Lovely Estates",
+    medianHomePrice: 280000,
+    pool: true,
+    tennis: false,
+    crimeRate: "low",
+    schools: [
+        {name: "Elementary School", rating: 8},
+        {name: "Middle School", rating: 6},
+        {name: "High School", rating: 8}
+    ]
+};
 
+const neighborhood2 = {
+    neighborhood: "Luminous Estates",
+    medianHomePrice: 270000,
+    pool: true,
+    tennis: false,
+    crimeRate: "high",
+    schools: [
+        {name: "Elementary School", rating: 8},
+        {name: "Middle School", rating: 8},
+        {name: "High School", rating: 8}
+    ]
+}
+
+const neighborhood3 = {
+    neighborhood: "Oak Mountain",
+    medianHomePrice: 290000,
+    pool: false,
+    tennis: false,
+    crimeRate: "low",
+    schools: [
+        {name: "Elementary School", rating: 8},
+        {name: "Middle School", rating: 8},
+        {name: "High School", rating: 8}
+    ]
+}
+
+const neighborhood4 = {
+    neighborhood: "Ginormous Acres",
+    medianHomePrice: 350000,
+    pool: true,
+    tennis: true,
+    crimeRate: "low",
+    schools: [
+        {name: "Elementary School", rating: 9},
+        {name: "Middle School", rating: 9},
+        {name: "High School", rating: 9}
+    ]
+}
+//
+console.log(isGoodNeighborhood(neighborhood1)) // returns false due to school rating
+console.log(isGoodNeighborhood(neighborhood2)) // returns false due to crime rate
+console.log(isGoodNeighborhood(neighborhood3)) // returns true
+console.log(isGoodNeighborhood(neighborhood4)) // returns false due to median home price
+
+
+
+function isGoodNeighborhood(neigh)
+{
+    let rateSum = 0;
+
+    for(let i = 0; i < neigh.schools.length; i++)
+    {
+        rateSum += neigh.schools[i].rating;
+    }
+
+    if(rateSum >= 24 && neigh.medianHomePrice < 300000 && neigh.crimeRate === 'low')
+    {
+        return true;
+    }
+
+    return false;
+
+}
