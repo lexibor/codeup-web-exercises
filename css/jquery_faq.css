@@ -1,20 +1,11 @@
-img
-{
-
-
-    filter: blur(4px);
-
-}
-
 
 dt
 {
     margin: .5em 0;
 }
 
-.column
+.row
 {
-    position: absolute;
 }
 
 .invisible
@@ -25,6 +16,16 @@ dt
 .highlight
 {
     background-color: yellow;
+}
+
+.bold-text
+{
+    font-weight: bold;
+}
+
+.blue-text
+{
+    color: blue;
 }
 
 .center
@@ -59,4 +60,26 @@ dt
     display: flex;
     flex-direction: column;
     margin: 1.5em 0;
+}
+
+.swap
+{
+    box-sizing: border-box;
+    margin: 1em;
+    padding: .25em;
+}
+
+.images
+{
+    width: 25em;
+    height: 15em;
+
+}
+
+#images
+{
+    display: flex;
+    justify-content: center;
+    margin: 3em 0;
+
 }
