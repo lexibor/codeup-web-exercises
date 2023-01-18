@@ -1,0 +1,62 @@
+img
+{
+
+
+    filter: blur(4px);
+
+}
+
+
+dt
+{
+    margin: .5em 0;
+}
+
+.column
+{
+    position: absolute;
+}
+
+.invisible
+{
+    visibility: hidden;
+}
+
+.highlight
+{
+    background-color: yellow;
+}
+
+.center
+{
+    text-align: center;
+}
+
+.title
+{
+    font-family: 'Inknut Antiqua', serif;
+
+    font-size: 2.2em;
+}
+
+.answer
+{
+    width: 75%;
+    margin: auto;
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 1.1em;
+}
+
+.question
+{
+    margin: auto;
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 1.3em;
+}
+
+.fact-content
+{
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em 0;
+}
