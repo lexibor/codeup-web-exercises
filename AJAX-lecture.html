@@ -41,9 +41,9 @@
 
   // The `done` method is used to wait until the data is asynchronously received, then it will call the function passed to it
 
-  $.ajax("./data/orders.json").done(function(data){ // the done method
-      console.log(data);
-  });
+  // $.ajax("./data/orders.json").done(function(data){ // the done method
+  //     console.log(data);
+  // });
 
 
   // $.ajax('./data/orders.json').done(function(data) {
@@ -104,7 +104,7 @@
 
   // passing params as key value pairs in a query string...
 
-  // $.get('https://swapi.dev/api/planets/1/?format=wookie').done(function(data) {
+  // $.get('https://swapi.dev/api/planets/1/?format=wookiee').done(function(data) {
   //     console.log(data);
   // });
 
@@ -151,6 +151,19 @@
 
    */
 
+    // $.get('https://pokeapi.co/api/v2/pokemon/pikachu').done(function(data) {
+    //       console.log(data);
+    //   });
+    //
+    // $.get('https://swapi.dev/api/species/').done(function(data)
+    // {
+    //   console.log(data)
+    // })
+    // $.get('https://swapi.dev/api/films/').done(function(data)
+    // {
+    //   console.log(data.results[0].director) //A New Hope Director
+    // })
+
   // ====================== EXPLORING JSON DATA
 
   // !! MINI-EXERCISE 2 !!
@@ -163,17 +176,17 @@
    */
 
   // $.get('./data/orders.json').done(function(data) {
-  //     // console.log(data);
-  //     // // log first order number
-  //     // console.log(data[0].orderNumber);
-  //     //
-  //     // // log third itemOrdered
-  //     // console.log(data[2].itemOrdered);
+  //     console.log(data);
+  //     // log first order number
+  //     console.log(data[0].orderNumber);
   //
-  //     // // log every orderedBy
-  //     // for (let i = 0; i < data.length; i++) {
-  //     //     console.log(data[i].orderedBy);
-  //     // }
+  //     // log third itemOrdered
+  //     console.log(data[2].itemOrdered);
+  //
+  //     // log every orderedBy
+  //     for (let i = 0; i < data.length; i++) {
+  //         console.log(data[i].orderedBy);
+  //     }
   //     //
   //     // // forEach version...
   //     // data.forEach(function(item) {
@@ -208,6 +221,17 @@
   //     console.log(status);
   //     console.log(error);
   // });
+    $.get('https://pokeapi.co/api/v2/evolution-chain/').done(function(data)
+    {
+      console.log(data);
+    })
+
+  $.get('https://pokeapi.co/api/v2/evolution-chain/110/').done(function(data)
+  {
+    console.log(data.chain.species.name);
+    console.log(data.chain.evolves_to[0].species.name);
+    console.log(data.chain.evolves_to[0].evolves_to[0].species.name);
+  })
 
   // ====================== CREATING HTML WITH JS
 
