@@ -371,28 +371,7 @@
 
 function encodeStr(str)
 {
-    let lowerStr = str.toLowerCase();
-    let newStr = '';
-    if(lowerStr.includes('a') && lowerStr.includes('s'))
-    {
-        newStr =  lowerStr.replaceAll('a', '@');
-        newStr = newStr.replaceAll('s', '$');
-    }
-    else if(lowerStr.includes('a'))
-    {
-        newStr =  lowerStr.replaceAll('a', '@');
-    }
-    else if(lowerStr.includes('i'))
-    {
-        newStr = lowerStr.replaceAll('i', '1');
-
-    }
-    else
-    {
-        return str;
-    }
-
-
+    let newStr = str.toLowerCase().replaceAll('a', '@').replaceAll('s', '$').replaceAll('i', '1')
 
     return newStr;
 }

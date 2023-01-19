@@ -31,6 +31,8 @@ $('dt').on('click', function ()
         $(this).parent().children().first().toggleClass('blue-text');
     })
 
+
+
     let images = $('#images');
 
     $('#btn-1').on('click', function()
