@@ -75,14 +75,14 @@
         style: 'mapbox://styles/mapbox/streets-v9',
         zoom: 10,
         // center: [-98.4916, 29.4252]
-        center: [-100.31663627832616, 25.687365864956593]//// 25.687365864956593, -100.31663627832616
+        center: [-100.31663627832616, 25.687365864956593] //// 25.687365864956593, -100.31663627832616
     });
 
     // the  geocode method from mapbox-geocoder-utils.js
     geocode("Av Paseo de los Leones 2342-Sección C, Cumbres Elite 2do. Sector, 64610 Monterrey, N.L., Mexico", 'pk.eyJ1IjoibGV4aWJvciIsImEiOiJjbGQ2bWE2bzMxZGJwM3lyeTh1czNzMGE3In0.tqgNGUXlJUn8N9qqHgOHVw').then(function(result) {
       console.log(result);
-      map.setCenter(result);
-      map.setZoom(15);
+      // map.setCenter(result);
+      map.setZoom(12);
     });
 
 
