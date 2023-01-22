@@ -33,9 +33,22 @@
     center: [-98.4916, 29.4252]
   });
 
+  //ALAMO MARKER
   var marker = new mapboxgl.Marker()
           .setLngLat([-98.4916, 29.4260])
           .addTo(map);
+
+  //ALAMO POPUP
+  var alamoPopup = new mapboxgl.Popup()
+          .setHTML("<p>Remember The Alamo!</p>")
+
+  marker.setPopup(alamoPopup)
+
+  //CODEUP POPUP
+  // var popup = new mapboxgl.Popup()
+  //         .setLngLat([-98.489615, 29.426827])
+  //         .setHTML("<p>Codeup Rocks!</p>")
+  //         .addTo(map)
 </script>
 </body>
 </html>
