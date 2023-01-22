@@ -37,12 +37,12 @@
     center: [-98.4916, 29.4252]
   });
 
-  // // the  geocode method from mapbox-geocoder-utils.js
-  // geocode("600 Navarro St #350, San Antonio, TX 78205", 'pk.eyJ1IjoibGV4aWJvciIsImEiOiJjbGQ2bWE2bzMxZGJwM3lyeTh1czNzMGE3In0.tqgNGUXlJUn8N9qqHgOHVw').then(function(result) {
-  //   console.log(result);
-  //   map.setCenter(result);
-  //   map.setZoom(20);
-  // });
+  // the  geocode method from mapbox-geocoder-utils.js
+  geocode("600 Navarro St #350, San Antonio, TX 78205", 'pk.eyJ1IjoibGV4aWJvciIsImEiOiJjbGQ2bWE2bzMxZGJwM3lyeTh1czNzMGE3In0.tqgNGUXlJUn8N9qqHgOHVw').then(function(result) {
+    console.log(result);
+    map.setCenter(result);
+    map.setZoom(20);
+  });
 
 
   // // reverse geocode method from mapbox-geocoder-utils.js
@@ -69,7 +69,7 @@
     });
   }
 
-  placeMarkerAndPopup(alamoInfo, 'pk.eyJ1IjoibGV4aWJvciIsImEiOiJjbGQ2bWE2bzMxZGJwM3lyeTh1czNzMGE3In0.tqgNGUXlJUn8N9qqHgOHVw', map);
+  // placeMarkerAndPopup(alamoInfo, 'pk.eyJ1IjoibGV4aWJvciIsImEiOiJjbGQ2bWE2bzMxZGJwM3lyeTh1czNzMGE3In0.tqgNGUXlJUn8N9qqHgOHVw', map);
 
 </script>
 </body>

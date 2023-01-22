@@ -78,6 +78,51 @@
         center: [-100.31663627832616, 25.687365864956593]//// 25.687365864956593, -100.31663627832616
     });
 
+    // the  geocode method from mapbox-geocoder-utils.js
+    geocode("Av Paseo de los Leones 2342-Sección C, Cumbres Elite 2do. Sector, 64610 Monterrey, N.L., Mexico", 'pk.eyJ1IjoibGV4aWJvciIsImEiOiJjbGQ2bWE2bzMxZGJwM3lyeTh1czNzMGE3In0.tqgNGUXlJUn8N9qqHgOHVw').then(function(result) {
+      console.log(result);
+      map.setCenter(result);
+      map.setZoom(15);
+    });
+
+
+
+    var restaurantes = [
+        {
+            address: "Av Paseo de los Leones 2342-Sección C, Cumbres Elite 2do. Sector, 64610 Monterrey, N.L., Mexico",
+            popupHTML: "<p>Taqueria Regia</p>"
+        },
+        {
+            address: "Muzquiz, Mitras Centro, 64460 Monterrey, N.L., Mexico",
+            popupHTML: "<p>La Chueca</p>"
+        },
+        {
+            address: "Pedro F. Quintanilla 6240, Monterrey, Nuevo León 64118",
+            popupHTML: "<p>Tacos Don Javi</p>"
+        }
+
+    ]
+
+    restaurantes.forEach(function(restaurante)
+    {
+        placeMarkerAndPopup(restaurante, 'pk.eyJ1IjoibGV4aWJvciIsImEiOiJjbGQ2bWE2bzMxZGJwM3lyeTh1czNzMGE3In0.tqgNGUXlJUn8N9qqHgOHVw', map);
+    });
+
+
+    // placeMarkerAndPopup(taqueriaRegiaInfo, 'pk.eyJ1IjoibGV4aWJvciIsImEiOiJjbGQ2bWE2bzMxZGJwM3lyeTh1czNzMGE3In0.tqgNGUXlJUn8N9qqHgOHVw', map);
+
+    function placeMarkerAndPopup(info, token, map) {
+        geocode(info.address, token).then(function(coordinates) {
+            var popup = new mapboxgl.Popup()
+                .setHTML(info.popupHTML);
+            var marker = new mapboxgl.Marker()
+                .setLngLat(coordinates)
+                .addTo(map)
+                .setPopup(popup);
+            // popup.addTo(map); //COMMENTING THIS OUT MAKES THE POPUP NOT APPEAR UNTIL IT IS CLICKED
+        });
+    }
+
 
 </script>
 
