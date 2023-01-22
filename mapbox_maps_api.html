@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+    <link rel='stylesheet' href="./css/stylesheet.css">
+  <style>
+    #map {
+      /* the width and height may be set to any size */
+      width: 100%;
+      flex-grow: 1;
+    }
+    header.container {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.78);
+    }
+    main.container, main.container>.row {
+      padding: 0;
+      flex-grow: 1;
+    }
+    aside.column {
+      width: 300px;
+      flex: none;
+    }
+
+  </style>
+
+
+</head>
+<body>
+<div class="page-wrapper">
+    <header class="container">
+        <div class="row full-width">
+            <div class="column">
+                RESTAURANTES EN MONTERREY
+            </div>
+            <div class="column">
+
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="row full-width">
+            <aside class="column">
+
+            </aside>
+            <div class="column">
+                <div id='map'></div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+
+
+
+
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+<script src="./js/mapbox-geocoder-utils.js"></script>
+
+
+<!---------- MAP OF MONTERREY SCRIPT ----------->
+
+
+<script>
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoibGV4aWJvciIsImEiOiJjbGQ2bWE2bzMxZGJwM3lyeTh1czNzMGE3In0.tqgNGUXlJUn8N9qqHgOHVw'
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        // center: [-98.4916, 29.4252]
+        center: [-100.31663627832616, 25.687365864956593]//// 25.687365864956593, -100.31663627832616
+    });
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
