@@ -14,6 +14,17 @@ let center = [-100.31663627832616, 25.687365864956593]
 
 
 
+//////////////// SEARCH BAR FUNCTIONALITY ///////////////////
+
+    $()
+
+
+
+
+
+
+
+
 //////////////// WEATHER CARD INFORMATION //////////////////
 
     let html = '';
@@ -36,7 +47,13 @@ let center = [-100.31663627832616, 25.687365864956593]
                                 <span id="date">${data.list[i].dt_txt.slice(0, 10)}</span>
                               </div>
                               <ul class="list-group list-group-flush">
-                              <li class="list-group-item" id="temps"><span id="min-temp">${data.list[i].main.temp_min}°C</span> / <span id="max-temp">${data.list[i].main.temp_max}°C</span></li>
+                              <li class="list-group-item" id="temp-weather"><div><span id="min-temp">${data.list[i].main.temp_min}°C</span> / <span id="max-temp">${data.list[i].main.temp_max}°C</span></div>
+                              
+                              <br>
+                              
+                              <img src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png" id="weather-icon">
+                              
+                              </li>
                                 <li class="list-group-item">Description: <span id="des">${data.list[i].weather[0].description}</span>
                                   <br><br>
                                   Humidity: <span id="humid-info">${data.list[i].main.humidity}gm³</span>

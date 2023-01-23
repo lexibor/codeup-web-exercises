@@ -49,10 +49,19 @@
 }
 
 
-#temps
+#temp-weather
 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
+}
+
+#weather-icon
+{
+    width: 7em;
+
+    align-self: center;
 }
 
 /*** ID'S END ***********************/
