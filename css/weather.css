@@ -1,0 +1,111 @@
+/** ID'S START ******/
+
+#title
+{
+    display: flex;
+    /*align-self: flex-start;*/
+    flex: 2 0 0;
+    margin-right: 3em;
+}
+
+#currentCity
+{
+
+    display: flex;
+    flex: 1 0 0;
+
+    margin: auto;
+}
+
+#cards
+{
+    display: flex;
+    flex-direction: row;
+    margin: 1em 0;
+
+}
+
+
+#map
+{
+
+    width: 100%;
+    height: 30em;
+    flex-grow: 1;
+}
+
+
+
+#nav-bar
+{
+    display:flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#search
+{
+    margin: 2em 0;
+}
+
+/*** ID'S END ***********************/
+
+
+
+
+/************* PAGE STRUCTURE ****************/
+
+.page-wrapper
+{
+    display: flex;
+    flex-direction: column;
+
+    padding: .5em;
+}
+
+
+header.container
+{
+
+}
+
+.container
+{
+    width: 100%;
+}
+
+.row
+{
+    display: flex;
+    /*width: 100%;*/
+}
+
+.column
+{
+    display: flex;
+    flex-direction: column;
+    /*flex-basis: 0;*/
+
+}
+/*************** PAGE STRUCTURE END *******************/
+
+
+
+/**************** EXTRA *******************/
+
+.card
+{
+    width: 17em;
+
+    font-size: .75em;
+
+    margin: .5em 1em;
+}
+
+
+
+
+
+
+/************* EXTRA END *****************/
+

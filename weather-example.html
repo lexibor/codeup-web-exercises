@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Practice</title>
+</head>
+<body>
+
+<h1>Exercise to Practice Open Weather Map</h1>
+
+<script type="text/javascript" src="./js/keys.js"></script>
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+<script>
+  "use strict";
+
+  $.get('https://api.openweathermap.org/data/2.5/forecast', {
+    lat: 29.4252,
+    lon: -98.4916,
+    appid: keys.openWeatherAPI,
+    units: 'metric'
+  }).done(function(data) {
+    // can be used to get forecast conditions at current time in increments of 24 hours
+    for (let i = 0; i < data.list.length; i += 8) {
+      console.log(data.list[i]);
+    }
+  }).fail(function(jqXhr, status, error) {
+    console.log(jqXhr);
+    console.log(status);
+    console.log(error);
+  });
+</script>
+</body>
+</html>
