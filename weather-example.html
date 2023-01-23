@@ -32,6 +32,23 @@
     console.log(status);
     console.log(error);
   });
+
+  $.get('https://openweathermap.org/weather-conditions',
+  {
+    lat: 29.4252,
+    lon: -98.4916,
+    appid: keys.openWeatherAPI,
+    units: 'metric'
+  }).done(function(data)
+  {
+
+    // for (let i = 0; i < data.list.length; i += 8) {
+      console.log(data.list[i]);
+    // }
+
+  })
+
+
 </script>
 </body>
 </html>
