@@ -64,6 +64,18 @@
     align-self: center;
 }
 
+#currentCity
+{
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#city-info
+{
+    margin-left: 2em;
+    flex-shrink: 1;
+}
+
 /*** ID'S END ***********************/
 
 
@@ -123,10 +135,6 @@
 
     margin: .5em .5em;
 }
-
-
-
-
 
 
 /************* EXTRA END *****************/
