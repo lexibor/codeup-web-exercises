@@ -129,8 +129,6 @@ marker.on('dragend', onDragEnd);
         });
     }
 
-
-
 })();
 
 

@@ -6,6 +6,8 @@
     /*align-self: flex-start;*/
     flex: 2 0 0;
     margin-right: 3em;
+
+    align-self: center;
 }
 
 #currentCity
@@ -32,6 +34,8 @@
     width: 100%;
     height: 30em;
     flex-grow: 1;
+    margin-bottom: 2em;
+
 }
 
 
@@ -40,6 +44,13 @@
 {
     display:flex;
     width: 100%;
+
+
+
+    height: 5em;
+
+    color: beige;
+
     justify-content: space-evenly;
 }
 
@@ -88,6 +99,11 @@
     display: flex;
     flex-direction: column;
 
+    background-color: black;
+    background-image: url("/img/rainy-window.jpeg");
+
+
+
     align-items: center;
 
     padding: .5em;
@@ -97,6 +113,9 @@
 {
     display: flex;
     flex-direction: column;
+
+    background-color: rgba(11, 22, 25,	0.9);
+    background-blend-mode: lighten;
 
     padding: 0;
     margin: 0;
