@@ -6,7 +6,7 @@
 mapboxgl.accessToken = keys.mapAPI;
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/navigation-night-v1',
+        style: 'mapbox://styles/mapbox/dark-v11',
         zoom: 10,
         // style:'mapbox://styles/mapbox/navigation-night-v1',
         // center: [-98.4916, 29.4252]
@@ -69,38 +69,45 @@ marker.on('dragend', onDragEnd);
 
 
                         console.log(data.city.name);
-                        cityInfo += `${data.city.name}`;
+
+                            cityInfo += `${data.city.name}`;
+
 
 
                     ////////// HTML POPULATION ///////////////
                     for (let i = 0; i < data.list.length; i += 8)
                     {
-                        html += `<div class="card">
-                                  <div class="card-header">
-                                    <span id="date">${data.list[i].dt_txt.slice(0, 10)}</span>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                  <li class="list-group-item" id="temp-weather"><div><span id="min-temp">${data.list[i].main.temp_min}°C</span> / <span id="max-temp">${data.list[i].main.temp_max}°C</span></div>
-                                  
-                                  <br>
-                                  
-                                  <img src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png" id="weather-icon">
-                                  
-                                  </li>
-                                    <li class="list-group-item">Description: <span id="des">${data.list[i].weather[0].description}</span>
-                                      <br><br>
-                                      Humidity: <span id="humid-info">${data.list[i].main.humidity}gm³</span>
-                                    </li>
-                                    <li class="list-group-item">Wind: <span id="wind-info">${data.list[i].wind.speed}m/s</span></li>
-                                    <li class="list-group-item">Pressure: <span id="press-info">${data.list[i].main.pressure}psi</span></li>
-                                  </ul>
+                        html += `<div class="card text-bg-dark border border-subtle">
+                                      <div class="card-header">
+                                        <span id="date">${data.list[i].dt_txt.slice(0, 10)}</span>
+                                      </div>
+                                      
+                                      <ul class="list-group list-group-flush">
+                                      
+                                          <li class="list-group-item text-bg-secondary" id="temp-weather">
+                                              <div>
+                                                  <span id="min-temp">${data.list[i].main.temp_min}°C</span> / <span id="max-temp">${data.list[i].main.temp_max}°C</span>
+                                              </div>
+                                          
+                                              <br>
+                                              
+                                              <img src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png" id="weather-icon">
+                                          </li>
+                                          
+                                            <li class="list-group-item text-bg-dark">Description: <span id="des">${data.list[i].weather[0].description}</span>
+                                              <br><br>
+                                              Humidity: <span id="humid-info">${data.list[i].main.humidity}gm³</span>
+                                            </li>
+                                            
+                                            <li class="list-group-item text-bg-dark">Wind: <span id="wind-info">${data.list[i].wind.speed}m/s</span></li>
+                                            
+                                            <li class="list-group-item text-bg-dark">Pressure: <span id="press-info">${data.list[i].main.pressure}psi</span></li> 
+                                      </ul>
                                 </div>`
                     }
 
                     $('#cards').html(html);
                     $('#city-info').html(cityInfo);
-
-
                 })
     }
 
@@ -111,9 +118,15 @@ marker.on('dragend', onDragEnd);
     //////////////// SEARCH BAR FUNCTIONALITY ///////////////////
     function updateWeather()
     {
+        let text = $('#city-info');
         $('#searchBtn').on('click', function(event)
         {
+            text.removeClass('animate');
             event.preventDefault();
+
+            setTimeout(function(){
+                text.addClass('animation');
+            }, 10);
 
             geocode($('#searchInpt').val(), keys.mapAPI).then(function(result)
             {

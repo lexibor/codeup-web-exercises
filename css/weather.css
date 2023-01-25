@@ -4,9 +4,10 @@
 {
     display: flex;
     /*align-self: flex-start;*/
-    flex: 2 0 0;
+    /*flex: 2 0 0;*/
     margin-right: 3em;
-
+    font-weight: bold;
+    font-size:2em;
     align-self: center;
 }
 
@@ -14,9 +15,23 @@
 {
 
     display: flex;
-    flex: 1 0 0;
+    /*flex: 1 0 0;*/
 
-    margin: auto;
+    /*flex-direction: row;*/
+
+    flex-wrap: nowrap;
+
+    /*flex-grow: 1;*/
+
+    width:100%;
+
+    text-align: center;
+
+    /*align-self: center;*/
+
+    /*margin: 0 40%;*/
+
+    /*margin: auto;*/
 }
 
 #cards
@@ -45,18 +60,41 @@
     display:flex;
     width: 100%;
 
+    flex-direction: row;
 
+    text-align: center;
 
-    height: 5em;
+    background-color: rgba(25,	43,	52	);
+
+    height: 7em;
 
     color: beige;
 
-    justify-content: space-evenly;
+    /*justify-content: center;*/
+    /*align-content: center;*/
 }
 
 #search
 {
     margin: 2em 0;
+}
+
+#searchInpt
+{
+
+    box-sizing: border-box;
+    padding: .25em;
+    border: none;
+    margin: 0;
+}
+
+#searchBtn
+{
+    border: none;
+
+    margin-left:-5px;
+
+    padding: .25em;
 }
 
 
@@ -75,16 +113,17 @@
     align-self: center;
 }
 
-#currentCity
-{
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
 
 #city-info
 {
-    margin-left: 2em;
+    /*margin-left: 2em;*/
     flex-shrink: 1;
+
+}
+
+.text-bg-secondary
+{
+    background-color: rgba(25,	43,	52	) !important;
 }
 
 /*** ID'S END ***********************/
@@ -101,8 +140,7 @@
 
     background-color: black;
     background-image: url("/img/rainy-window.jpeg");
-
-
+    /*background-blend-mode: lighten;*/
 
     align-items: center;
 
@@ -140,21 +178,50 @@
     /*flex-basis: 0;*/
 
 }
+
+.animate
+{
+    animation: fadeInOut 2s;
+}
+
+
+.city-bold
+{
+    font-weight: bold;
+}
+
+.search-container
+{
+    align-self: center;
+}
+
 /*************** PAGE STRUCTURE END *******************/
 
 
 
-/**************** EXTRA *******************/
+/**************** CARD *******************/
 
 .card
 {
     width: 25rem;
 
-    font-size: .65em;
+
+    font-size: .60em;
 
     margin: .5em .5em;
+
 }
 
 
-/************* EXTRA END *****************/
+/************* ANIMATION *****************/
+
+
+
+
+@keyframes fadeInOut
+{
+    0% { opacity: 1; }
+    50%{ opacity: 0; }
+    100% { opacity: 1; }
+}
 

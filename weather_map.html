@@ -22,7 +22,7 @@
 
     <div class="row" id="nav-bar">
       <div class="column" id="title">Weather App</div>
-        <div class="column" id="currentCity">Current City: <span id="city-info"></span></div>
+        <div class="column" id="currentCity" style="width: 100% !important"><span class="city-bold">Current City</span> <span id="city-info" class=""></span></div>
       </div>
 
       <!--- SEARCH BAR ------>
@@ -31,10 +31,12 @@
 
       <div class="column">
 
-        <form class="search" style="margin:auto;max-width:300px">
-          <input type="text" placeholder="Search.." id="searchInpt">
-          <button type="submit" id="searchBtn">Search</button>
-        </form>
+        <div class="search-container ">
+          <form class="search " style="margin:auto;max-width:300px">
+            <input  class="text-bg-dark" type="text" placeholder="Search.." id="searchInpt">
+            <button class="text-bg-secondary" type="submit" id="searchBtn">Search</button>
+          </form>
+        </div>
 
       </div>
 
@@ -47,9 +49,9 @@
   <div class="container">
     <div class="row">
 
-      <div class="column" id="cards">
+      <div class="column" id="cards"></div>
 
-      </div>
+
 
     </div>
 
