@@ -7,7 +7,8 @@
     /*flex: 2 0 0;*/
     margin-right: 3em;
     font-weight: bold;
-    font-size:2em;
+    font-size: 2.5em;
+    text-shadow: 1px 1px  #333333;
     align-self: center;
 }
 
@@ -15,23 +16,18 @@
 {
 
     display: flex;
-    /*flex: 1 0 0;*/
-
-    /*flex-direction: row;*/
 
     flex-wrap: nowrap;
 
-    /*flex-grow: 1;*/
+    font-size: 1.5em;
 
     width:100%;
 
     text-align: center;
+    text-shadow: 1px 1px  #333333;
+    /*-webkit-text-stroke-width: .5px;*/
+    /*-webkit-text-stroke-color: #bab6b8;*/
 
-    /*align-self: center;*/
-
-    /*margin: 0 40%;*/
-
-    /*margin: auto;*/
 }
 
 #cards
@@ -51,6 +47,8 @@
     flex-grow: 1;
     margin-bottom: 2em;
 
+    border-radius: 25px;
+
 }
 
 
@@ -64,14 +62,13 @@
 
     text-align: center;
 
-    background-color: rgba(25,	43,	52	);
+    height: 10em;
 
-    height: 7em;
+    color: #bab6b8;
 
-    color: beige;
+    border-bottom: double 3px #f5f0f2;
+    border-radius: 1px;
 
-    /*justify-content: center;*/
-    /*align-content: center;*/
 }
 
 #search
@@ -134,8 +131,12 @@
     display: flex;
     flex-direction: column;
 
+    font-family: 'Varela Round', sans-serif;
+
     background-color: black;
-    background-image: url("/img/rainy-window.jpeg");
+    background-image: url("/img/cloudy-sky.jpeg");
+    background-repeat: round;
+    background-size: auto;
     /*background-blend-mode: lighten;*/
 
     align-items: center;
@@ -148,7 +149,7 @@
     display: flex;
     flex-direction: column;
 
-    background-color: rgba(11, 22, 25,	0.9);
+    background-color: rgba(240, 228, 233, 0.6);
     background-blend-mode: lighten;
 
     padding: 0;
@@ -186,10 +187,6 @@
 }
 
 
-.text-bg-secondary
-{
-    background-color: rgba(25,	43,	52	) !important;
-}
 
 /*************** PAGE STRUCTURE END *******************/
 

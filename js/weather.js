@@ -13,7 +13,7 @@ mapboxgl.accessToken = keys.mapAPI;
 
 
     //////////////// DRAGGABLE MARKER //////////////////////
-let marker = new mapboxgl.Marker();
+let marker = new mapboxgl.Marker({color: '#f0e4e9'});
     function placeMarker(ln, lt, map)
     {
         reverseGeocode({lat: lt, lng: ln}, keys.mapAPI).then(function(results)
@@ -36,6 +36,7 @@ marker.on('dragend', onDragEnd);
         lngLat = marker.getLngLat();
         console.log(`Longitude: ${lngLat.lng}, Latitude: ${lngLat.lat}`);
         getWeather(lngLat.lng, lngLat.lat);
+
         map.flyTo({
             zoom: 11,
             center: [lngLat.lng, lngLat.lat],
@@ -69,19 +70,17 @@ marker.on('dragend', onDragEnd);
 
                             cityInfo += `${data.city.name}`;
 
-
-
                     ////////// HTML POPULATION ///////////////
                     for (let i = 0; i < data.list.length; i += 8)
                     {
-                        html += `<div class="card text-bg-dark border border-subtle">
+                        html += `<div class="card text-bg-secondary border border-subtle">
                                       <div class="card-header">
                                         <span id="date">${data.list[i].dt_txt.slice(0, 10)}</span>
                                       </div>
                                       
                                       <ul class="list-group list-group-flush">
                                       
-                                          <li class="list-group-item text-bg-secondary" id="temp-weather">
+                                          <li class="list-group-item" id="temp-weather">
                                               <div>
                                                   <span id="min-temp">${data.list[i].main.temp_min}°C</span> / <span id="max-temp">${data.list[i].main.temp_max}°C</span>
                                               </div>
@@ -91,14 +90,14 @@ marker.on('dragend', onDragEnd);
                                               <img src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png" id="weather-icon">
                                           </li>
                                           
-                                            <li class="list-group-item text-bg-dark">Description: <span id="des">${data.list[i].weather[0].description}</span>
+                                            <li class="list-group-item ">Description: <span id="des">${data.list[i].weather[0].description}</span>
                                               <br><br>
                                               Humidity: <span id="humid-info">${data.list[i].main.humidity}gm³</span>
                                             </li>
                                             
-                                            <li class="list-group-item text-bg-dark">Wind: <span id="wind-info">${data.list[i].wind.speed}m/s</span></li>
+                                            <li class="list-group-item ">Wind: <span id="wind-info">${data.list[i].wind.speed}m/s</span></li>
                                             
-                                            <li class="list-group-item text-bg-dark">Pressure: <span id="press-info">${data.list[i].main.pressure}psi</span></li> 
+                                            <li class="list-group-item ">Pressure: <span id="press-info">${data.list[i].main.pressure}psi</span></li> 
                                       </ul>
                                 </div>`
                     }
