@@ -8,7 +8,7 @@ mapboxgl.accessToken = keys.mapAPI;
         container: 'map',
         style: 'mapbox://styles/mapbox/dark-v11',
         zoom: 10,
-        center: [-100.31337877173254, 25.678227189708988] //// 25.678227189708988, -100.31337877173254
+        center: [-98.51400032904631, 29.502708028781367] //// 29.502708028781367, -98.51400032904631
     });
 
 
@@ -38,7 +38,7 @@ marker.on('dragend', onDragEnd);
         getWeather(lngLat.lng, lngLat.lat);
 
         map.flyTo({
-            zoom: 11,
+            zoom: 10,
             center: [lngLat.lng, lngLat.lat],
             essential: true,
         })
@@ -81,7 +81,7 @@ marker.on('dragend', onDragEnd);
                                       <ul class="list-group list-group-flush">
                                       
                                           <li class="list-group-item" id="temp-weather">
-                                              <div>
+                                              <div id="temp-info">
                                                   <span id="min-temp">${data.list[i].main.temp_min}°C</span> / <span id="max-temp">${data.list[i].main.temp_max}°C</span>
                                               </div>
                                           
@@ -97,7 +97,7 @@ marker.on('dragend', onDragEnd);
                                             
                                             <li class="list-group-item ">Wind: <span id="wind-info">${data.list[i].wind.speed}m/s</span></li>
                                             
-                                            <li class="list-group-item ">Pressure: <span id="press-info">${data.list[i].main.pressure}psi</span></li> 
+                                            <li class="list-group-item ">Pressure: <span id="press-info">${data.list[i].main.pressure}hPa</span></li> 
                                       </ul>
                                 </div>`
                     }
@@ -108,7 +108,7 @@ marker.on('dragend', onDragEnd);
     }
 
 
-    getWeather(-100.31337877173254, 25.678227189708988);
+    getWeather(-98.51400032904631, 29.502708028781367);
     updateWeather();
 
     //////////////// SEARCH BAR FUNCTIONALITY ///////////////////

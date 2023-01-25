@@ -62,12 +62,17 @@
 
     text-align: center;
 
-    height: 10em;
+    height: 9.8em;
 
     color: #bab6b8;
+    background-color: rgba(240, 228, 233, 0.62);
 
-    border-bottom: double 3px #f5f0f2;
+    border-bottom: ridge 3px #f5f0f2;
     border-radius: 1px;
+
+    -webkit-box-shadow: 0 4px 6px -6px #222;
+    -moz-box-shadow: 0 4px 6px -6px #222;
+    box-shadow: 0 4px 6px -6px #222;
 
 }
 
@@ -80,9 +85,11 @@
 {
 
     box-sizing: border-box;
-    padding: .25em;
+    padding: .30em;
     border: none;
     margin: 0;
+
+    width: 15em
 }
 
 #searchBtn
@@ -91,7 +98,7 @@
 
     margin-left:-5px;
 
-    padding: .25em;
+    padding: .3em;
 }
 
 
@@ -118,6 +125,15 @@
 
 }
 
+#temp-info
+{
+    font-size: 1.5em;
+}
+
+#date
+{
+    font-size: 1.75em;
+}
 
 /*** ID'S END ***********************/
 
@@ -135,10 +151,7 @@
 
     background-color: black;
     background-image: url("/img/cloudy-sky.jpeg");
-    background-repeat: round;
-    background-size: auto;
-    /*background-blend-mode: lighten;*/
-
+    background-size: cover;
     align-items: center;
 
     padding: .5em;
@@ -198,10 +211,11 @@
 {
     width: 25rem;
 
-
-    font-size: .60em;
+    font-size: .75em;
 
     margin: .5em .5em;
+
+
 
 }
 
