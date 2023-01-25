@@ -8,13 +8,11 @@ mapboxgl.accessToken = keys.mapAPI;
         container: 'map',
         style: 'mapbox://styles/mapbox/dark-v11',
         zoom: 10,
-        // style:'mapbox://styles/mapbox/navigation-night-v1',
-        // center: [-98.4916, 29.4252]
         center: [-100.31337877173254, 25.678227189708988] //// 25.678227189708988, -100.31337877173254
     });
 
 
-    ////// DRAGGABLE MARKER ////////////
+    //////////////// DRAGGABLE MARKER //////////////////////
 let marker = new mapboxgl.Marker();
     function placeMarker(ln, lt, map)
     {
@@ -22,7 +20,6 @@ let marker = new mapboxgl.Marker();
         {
             geocode(results, keys.mapAPI).then(function(result)
             {
-                // marker = new mapboxgl.Marker({draggable: true, essential: true})
                     marker.setLngLat([result[0], result[1]]);
                     marker.addTo(map);
                     marker.setDraggable(true);
@@ -121,12 +118,7 @@ marker.on('dragend', onDragEnd);
         let text = $('#city-info');
         $('#searchBtn').on('click', function(event)
         {
-            text.removeClass('animate');
             event.preventDefault();
-
-            setTimeout(function(){
-                text.addClass('animation');
-            }, 10);
 
             geocode($('#searchInpt').val(), keys.mapAPI).then(function(result)
             {

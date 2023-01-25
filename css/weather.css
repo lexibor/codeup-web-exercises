@@ -121,10 +121,6 @@
 
 }
 
-.text-bg-secondary
-{
-    background-color: rgba(25,	43,	52	) !important;
-}
 
 /*** ID'S END ***********************/
 
@@ -179,12 +175,6 @@
 
 }
 
-.animate
-{
-    animation: fadeInOut 2s;
-}
-
-
 .city-bold
 {
     font-weight: bold;
@@ -193,6 +183,12 @@
 .search-container
 {
     align-self: center;
+}
+
+
+.text-bg-secondary
+{
+    background-color: rgba(25,	43,	52	) !important;
 }
 
 /*************** PAGE STRUCTURE END *******************/
@@ -210,18 +206,5 @@
 
     margin: .5em .5em;
 
-}
-
-
-/************* ANIMATION *****************/
-
-
-
-
-@keyframes fadeInOut
-{
-    0% { opacity: 1; }
-    50%{ opacity: 0; }
-    100% { opacity: 1; }
 }
 
