@@ -35,7 +35,7 @@ const users = [
 // declared as `const`
 const name = 'Alexia_Briones_Ornelas';
 const email = 'brionesornelas.alexia@gmail.com';
-const languages = ['Javascript', 'HTML', 'jQuery', 'Java'];
+const languages = ['Javascript', 'HTML', 'jQuery', 'Java', 'Spanish'];
 
 // TODO: rewrite the object literal using object property shorthand
 users.push({
@@ -89,3 +89,5 @@ for(let developer of developers)
     list += `<li>${developer}</li>`
 }
 list += '</ul>';
+
+console.log(list);
