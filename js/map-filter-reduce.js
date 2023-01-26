@@ -53,23 +53,25 @@ const longestEmail = userEmails.reduce((longest, current) => (current.length > l
 
 console.log(longestEmail)
 
+
+
 const allUsers = users.reduce((prev, current, i) => i === 0 ? current.name : `${prev}, ${current.name}`, '');
 
-console.log(`Your instructors are: ${allUsers}`);
+console.log(`Your instructors are: ${allUsers}.`);
 
 
 
 /////////// BONUS ///////////
 
 let allLang = [];
-for(user of users)
+for(let user of users)
 {
     allLang.push(...user.languages);
 }
 
 console.log(allLang);
 
-const uniqueLang = allLang.reduce((prev, current) => (prev.includes(current)) ? prev : [...prev, current] , []);
+const uniqueLang = allLang.reduce((prev, current) => (prev.includes(current)) ? prev : [...prev, current], []);
 
 console.log(uniqueLang);
 
