@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Warmups</title>
+
+
+  <style>
+
+    .red
+    {
+      background-color: red;
+    }
+
+  </style>
+
+
+
+</head>
+<body>
+
+
+<button id="red" onclick="changeColor()">CLICK ME</button>
+
+
+
+
+<script type="text/javascript" src="js/jquery-3.6.3.js"></script>
+
+<script>
+
+  function changeColor()
+  {
+    $('body').toggleClass('red');
+  }
+
+</script>
+
+</body>
+</html>
