@@ -49,7 +49,7 @@ const yearsOfExp = users.reduce((accumulator, val) => accumulator + val.yearsOfE
 
 console.log(yearsOfExp);
 
-const longestEmail = userEmails.reduce((longest, current) => (current.length > longest.length) ? current : longest);
+const longestEmail = userEmails.reduce((longest, current) => (current.length > longest.length) ? current : longest, '');
 
 console.log(longestEmail)
 

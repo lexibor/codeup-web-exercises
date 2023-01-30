@@ -20,7 +20,7 @@
 <body>
 
 
-<button id="red" onclick="changeColor()">CLICK ME</button>
+<button>CLICK ME</button>
 
 
 
@@ -29,10 +29,17 @@
 
 <script>
 
-  function changeColor()
+    //for 'onCLick'
+  // function changeColor()
+  // {
+  //   $('body').toggleClass('red');
+  // }
+
+  $('button').on('click', function()
   {
-    $('body').toggleClass('red');
-  }
+      $('body').toggleClass('red');
+  })
+
 
 </script>
 
